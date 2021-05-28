@@ -1,109 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>danish hakim.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Danish Hakim</title>
+    <!-- init Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/libraries/materialize/materialize.css" />
+    <script src="assets/libraries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/libraries/materialize/materialize.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/app.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <div id="loading">
-        <div id="spinner"></div>
-    </div>
-    <div id="particles-js"></div>
-    <div id="box">
-        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
-        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
-    </div>
-    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
-    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
-    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
-        <h1>danish hakim.</h1>
-        <h2>Software Developer / Student / Human</h2>
-        <div id="menu">
-            <a onclick="showabout()">about</a>
-            <a onclick="showwork()">work</a>
-            <a onclick="showcontact()">contact</a>
-        </div>
-        <table>
-            <tr>
-                <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter" onclick="window.location.href = 'https://twitter.com/Jerit3787';"></i></a></td>
-                <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-instagram onclick="window.location.href = 'https://instagram.com/fly._over';""></i></a></td>
-                <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-dribbble" onclick="window.location.href = 'https://github.com/Jerit3787';"></i></a></td>
-            </tr>
-        </table>
-    </div>
-    <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>works.</h1>
-        <section>
-            <h2>Student</h2>
-            <p>
-                Hello there! I'am Danish Hakim. A 16 years old student in MRSM Tun Ghafar Baba. Here is the place I publish my work where I learn to program everything I could imagine. So, I think that's only about my work.
-            </p>
-            <div id="used">
-                <div><i class="fas fa-circle"></i>&nbsp;Java</div>
-                <div><i class="fas fa-circle"></i>&nbsp;Python</div>
-                <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
+    <div class="navbar-fixed" style="height: 56px;">
+        <nav style="background-color: rgb(25, 25, 25); box-shadow: 0 0 0 0;">
+            <div class="nav-wrapper">
+                <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#biodata">Biodata</a></li>
+                    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                </ul>
             </div>
-            <button onclick="window.location.href = 'https://github.com/Jerit3787';" class="btn_one">Github</button>
-            <button onclick="window.location.href = 'https://twitter.com/Jerit3787';" class="btn_two">Twitter</button>
-        </section>
+        </nav>
     </div>
-    <div id="about_container" class="container">
-        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-        <h1>about.</h1>
-        <section>
-            <h2>about me</h2>
-            <p>
-                Hello there! I'am Danish Hakim. A 16 years old student in MRSM Tun Ghafar Baba. Here is the place I publish my work where I learn to program everything I could imagine. So, I think that's only about my work.
-            </p>
-            <p>
-                Learning programming is quite fun. I wish to pursue my dream on either Computer Engineering or Software Engineering. I started programming when I was 10 years old with android development. And now I have learned more that I could think of. So see you
-                soon.
-            </p>
-        </section>
-        <section>
-            <h2>skills</h2>
-            <p>
-                java. python. javascript. css. i do eveything ;)
-            </p>
-        </section>
+    <ul class="sidenav" id="mobile-demo" style="background-color: #28282a;">
+        <li>
+            <div class="user-view">
+                <div class="background" style="background-color: #171718;">
+                </div>
+                <a href="#name"><span class="white-text name">Menu</span></a>
+            </div>
+        </li>
+        <li style="margin-top: 5px;"><a style="color: white;" href="#home" class="sidenav-close"><i style="color: white" class="material-icons">home</i>Home</a></li>
+        <li style="margin-top: 5px;"><a style="color: white" href="#biodata" class="sidenav-close"><i style="color: white" class="material-icons">account_circle</i>Biodata</a></li>
+        <li style="margin-top: 5px;"><a style="color: white" href="collapsible.html">JavaScript</a></li>
+    </ul>
+    <div class="flex-container fading" id="home">
+        <h6 style="margin-bottom: 15px; color: #ffffff6c ;">Hi, my name is Danish and I am a</h6>
+        <h4 style="margin-top: 0;">
+            <a class="typewrite line-1 anim-typewriter" data-period="2000" data-type='[ "Student.", "Programmer.", "Developer."]'>
+                <span class="wrap"></span>
+            </a>
+        </h4>
     </div>
-    <div id="contact_container" class="container">
-        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-        <h1>contact.</h1>
-        <section>
-            <h2>contact me</h2>
-            <p>
-                <form>
-                    <input type="text" placeholder="name" required>
-                    <input type="email" placeholder="email" required><br>
-                    <textarea placeholder="your message" required rows="5"></textarea><br>
-                    <button class="btn_one">send</button>
-                </form>
-            </p>
-        </section>
+    <div class="spacing" id="biodata">
     </div>
-    <div id="footer">
-        made using cool template by<br> <a href="https://imfunniee.github.io">imfunniee</a>
+    <div class="section fading" style="padding: 20px">
+        <div class="row">
+            <div class="col s12 m12 l4">
+                <div class="flex-container-nofixed" style="height: 100%;">
+                    <img style="margin-left:10px" width="300" src="assets/img/myself.png">
+                </div>
+            </div>
+            <div class="col s12 m12 l8" style="height:100%">
+                <h5>Hi, my name is Mohammad Danish Hakim bin Mohd Nasir, a student from Malaysia.</h5>
+                <h5>I do really like to explore new things which explains why I choose to persue into technology</h5>
+                <h5>I am a self-tought programmer which I started when I was 10 years old</h5>
+                <h5>I am currently studying in MRSM Tun Ghafar Baba, Melaka.</h5>
+            </div>
+        </div>
     </div>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="particles.js"></script>
-    <script src="app.js"></script>
+    <div class="spacing">
+    </div>
+    <div class="section fading" id="biodata" style="padding: 20px">
+        <div class="row">
+            <div class="col s12 m12 l4">
+                <div class="flex-container-nofixed">
+                    <h1>Skills</h1>
+                </div>
+            </div>
+            <div class="col s12 m12 l8" style="height:100%">
+                <h5>Here are my main programming languages that I use for most of my projects</h5>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
