@@ -1,83 +1,147 @@
-/* Google Fonts */
-
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
-
-/* Global */
-
-html {
-    min-height: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
 body {
-    height: calc(100vh - 8em);
-    color: rgba(255, 255, 255, .75);
-    font-family: 'Anonymous Pro', monospace;
-    background-color: rgb(25, 25, 25);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Anonymous Pro', monospace;
+  background-color: #191919;
 }
 
+body .WebContainer {
+  width: 100%;
+  height: calc(100vh - 56px);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body .WebContainer .global-div {
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+body .WebContainer .intro-container {
+  height: calc(100vh - 56px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1c1c1c;
+}
+
+body .WebContainer .profile-container {
+  height: calc(100vh - 56px);
+  background-color: #262626;
+}
+
+body .WebContainer .profile-container .flex-container-nofixed {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .WebContainer .profile-container .description {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .WebContainer .profile-container .setheight {
+  height: calc(100vh - 56px);
+}
+
+@media screen and (max-width: 998px) {
+  body .WebContainer .setheight {
+    height: auto;
+  }
+  body .WebContainer .profile-container {
+    height: auto;
+  }
+}
+
+body .WebContainer .skill-container {
+  height: calc(100vh - 56px);
+  background-color: #303030;
+}
+
+/* Google Fonts */
+/* Global */
 .line-1 {
-    font-size: 180%;
-    text-align: center;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, .75);
-    font-family: 'Anonymous Pro', monospace;
+  font-size: 180%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Anonymous Pro', monospace;
 }
-
 
 /* Animation */
-
 .anim-typewriter {
-    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+  -webkit-animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+          animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
 }
 
 @keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 24em;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+
+@-webkit-keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 @keyframes blinkTextCursor {
-    from {
-        border-right-color: rgba(255, 255, 255, .75);
-    }
-    to {
-        border-right-color: transparent;
-    }
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
-
-.flex-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    height: 96vh;
-}
-
-.spacing {
-    width: 100vw;
-    background-color: black;
-    height: 56px;
-}
-
-.flex-container-nofixed {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.center-horizontal {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-}
+/*# sourceMappingURL=style.css.map */

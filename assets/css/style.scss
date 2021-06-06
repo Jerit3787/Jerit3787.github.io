@@ -1,0 +1,98 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    color: rgba(255, 255, 255, .75);
+    font-family: 'Anonymous Pro', monospace;
+    background-color: rgb(25, 25, 25);
+    .WebContainer {
+        width: 100%;
+        height: calc(100vh - 56px);
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        .global-div {
+            width: 100vw;
+            scroll-snap-align: start;
+        }
+        .intro-container {
+            height: calc(100vh - 56px);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(28, 28, 28);
+        }
+        .profile-container {
+            height: calc(100vh - 56px);
+            background-color: rgb(38, 38, 38);
+            .flex-container-nofixed {
+                width: 100%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+            .description {
+                flex-flow: column nowrap;
+                align-items: flex-start;
+            }
+            .setheight {
+                height: calc(100vh - 56px);
+            }
+        }
+        @media screen and (max-width: 998px) {
+            .setheight {
+                height: auto;
+            }
+            .profile-container {
+                height: auto;
+            }
+        }
+        .skill-container {
+            height: calc(100vh - 56px);
+            background-color: rgb(48, 48, 48);
+        }
+    }
+}
+
+
+/* Google Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+
+.line-1 {
+    font-size: 180%;
+    text-align: center;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .75);
+    font-family: 'Anonymous Pro', monospace;
+}
+
+
+/* Animation */
+
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
