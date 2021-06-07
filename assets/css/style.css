@@ -40,9 +40,19 @@ body .WebContainer .intro-container {
   background-color: #1c1c1c;
 }
 
+@media screen and (min-width: 998px) {
+  body .WebContainer .setheight {
+    height: calc(100vh - 56px);
+  }
+  body .WebContainer .profile-container {
+    height: calc(100vh - 56px);
+  }
+}
+
 body .WebContainer .profile-container {
-  height: calc(100vh - 56px);
+  height: auto;
   background-color: #262626;
+  padding: 20px 20px 100px 20px;
 }
 
 body .WebContainer .profile-container .flex-container-nofixed {
@@ -75,20 +85,15 @@ body .WebContainer .profile-container .description {
 }
 
 body .WebContainer .profile-container .setheight {
-  height: calc(100vh - 56px);
-}
-
-@media screen and (max-width: 998px) {
-  body .WebContainer .setheight {
-    height: auto;
-  }
-  body .WebContainer .profile-container {
-    height: auto;
-  }
+  height: auto;
 }
 
 body .WebContainer .skill-container {
-  height: calc(100vh - 56px);
+  height: auto;
+  background-color: #303030;
+}
+
+body .WebContainer .skill-container .card {
   background-color: #303030;
 }
 

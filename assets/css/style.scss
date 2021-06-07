@@ -23,9 +23,18 @@ body {
             align-items: center;
             background-color: rgb(28, 28, 28);
         }
+        @media screen and (min-width: 998px) {
+            .setheight {
+                height: calc(100vh - 56px);
+            }
+            .profile-container {
+                height: calc(100vh - 56px);
+            }
+        }
         .profile-container {
-            height: calc(100vh - 56px);
+            height: auto;
             background-color: rgb(38, 38, 38);
+            padding: 20px 20px 100px 20px;
             .flex-container-nofixed {
                 width: 100%;
                 display: flex;
@@ -39,20 +48,15 @@ body {
                 align-items: flex-start;
             }
             .setheight {
-                height: calc(100vh - 56px);
-            }
-        }
-        @media screen and (max-width: 998px) {
-            .setheight {
-                height: auto;
-            }
-            .profile-container {
-                height: auto;
+                height: auto
             }
         }
         .skill-container {
-            height: calc(100vh - 56px);
+            height: auto;
             background-color: rgb(48, 48, 48);
+            .card {
+                background-color: rgb(48, 48, 48);
+            }
         }
     }
 }
