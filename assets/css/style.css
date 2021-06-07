@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Anonymous Pro', monospace;
+  background-color: #191919;
+}
+
+body .WebContainer {
+  width: 100%;
+  height: calc(100vh - 56px);
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body .WebContainer .global-div {
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+body .WebContainer .intro-container {
+  height: calc(100vh - 56px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1c1c1c;
+}
+
+body .WebContainer .profile-container {
+  height: auto;
+  background-color: #262626;
+  padding: 20px 20px 100px 20px;
+}
+
+body .WebContainer .profile-container .row {
+  height: 100%;
+}
+
+body .WebContainer .profile-container .flex-container-nofixed {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .WebContainer .profile-container .description {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .WebContainer .profile-container .setheight {
+  height: auto;
+}
+
+@media screen and (min-width: 998px) {
+  body .WebContainer .profile-container {
+    height: calc(100vh - 56px);
+    padding: 20px;
+  }
+  body .WebContainer .profile-container .setheight {
+    height: calc(100vh - 56px);
+  }
+}
+
+body .WebContainer .skill-container {
+  height: auto;
+  background-color: #1c1c1c;
+}
+
+body .WebContainer .skill-container .card {
+  background-color: #262626;
+}
+
+body .WebContainer .contact-container {
+  height: calc(100vh - 56px);
+  background-color: #262626;
+}
+
+body .WebContainer .contact-container .icon {
+  height: 24px;
+  width: 24px;
+  color: white;
+}
+
+body .WebContainer .contact-container .text {
+  margin: 0;
+  padding-left: 10px;
+  color: white;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+body .WebContainer .contact-container .flex-container {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .WebContainer .contact-container .page-footer {
+  background-color: #262626;
+}
+
+/* Google Fonts */
+/* Global */
+.line-1 {
+  font-size: 180%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Anonymous Pro', monospace;
+}
+
+/* Animation */
+.anim-typewriter {
+  -webkit-animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+          animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+
+@-webkit-keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+/*# sourceMappingURL=style.css.map */
