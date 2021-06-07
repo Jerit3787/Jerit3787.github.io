@@ -57,25 +57,4 @@ window.onload = function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     M.AutoInit();
-
-    var fadings = $(".fading");
-    $(window).scroll(function() {
-        //the viewport's height
-        var vpheight = document.documentElement.clientHeight;
-        //loop through all interested elements
-        fadings.each(function() {
-            //get the rect of the current element
-            var r = this.getBoundingClientRect();
-            //the current element's height  
-            var thisHeight = $(this).height();
-            //check if the element is completely out of the viewport area
-            //to just ignore it (save some computation)
-            if (thisHeight + r.top < 0 || r.top > vpheight) return true;
-            //calculate the opacity for partially visible/hidden element
-            var opacity = Math.max(0, Math.min(1,
-                (r.top >= 0 ? vpheight - r.top : thisHeight - Math.abs(r.top)) / vpheight));
-            //set the opacity
-            $(this).css("opacity", opacity);
-        });
-    });
 });
