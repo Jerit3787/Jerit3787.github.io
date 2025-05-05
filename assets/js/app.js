@@ -25,34 +25,51 @@ TxtType.prototype.tick = function () {
 
     // Create a blinking cursor effect
     wrapElement.style.borderRight = '0.08em solid';
-    wrapElement.style.animation = 'blink-caret 0.75s step-end infinite';
+    
+    // Check if animation is supported and if the animation is defined in CSS
+    if ('animation' in wrapElement.style && document.querySelector('@keyframes blink-caret')) {
+        wrapElement.style.animation = 'blink-caret 0.75s step-end infinite';
+    } else {
+        // Fallback for browsers without animation support or missing keyframes
+        setInterval(() => {
+            wrapElement.style.borderColor = 
+                wrapElement.style.borderColor === 'transparent' ? 
+                'var(--text-color)' : 'transparent';
+        }, 750);
+    }
 
     this.el.innerHTML = '';
     this.el.appendChild(wrapElement);
 
-    var that = this;
-    var delta = 100; // Typing speed
+    // Calculate a slightly variable typing speed for more natural effect
+    // Speed ranges from 70ms to 130ms for typing
+    const baseSpeed = 100;
+    const variability = 30;
+    const delta = baseSpeed + Math.floor(Math.random() * variability * 2) - variability;
 
     if (this.isDeleting) {
-        delta /= 2;
+        delta /= 2; // Deletion is faster
     }
 
     if (!this.isDeleting && this.txt === fullTxt) {
-        delta = 2000; // Pause at end of word
-        setTimeout(function () {
-            that.isDeleting = true;
-            that.tick();
-        }, delta);
+        const pauseDelta = 2000; // Pause at end of word
+        // Using arrow function to avoid 'that' reference
+        setTimeout(() => {
+            this.isDeleting = true;
+            this.tick();
+        }, pauseDelta);
         return;
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500; // Pause before starting new word
+        const pauseDelta = 500; // Pause before starting new word
+        // Using arrow function here too
+        setTimeout(() => this.tick(), pauseDelta);
+        return;
     }
 
-    setTimeout(function () {
-        that.tick();
-    }, delta);
+    // Using arrow function for consistency
+    setTimeout(() => this.tick(), delta);
 };
 
 // Check for saved theme preference or default to dark
