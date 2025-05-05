@@ -31,11 +31,13 @@ TxtType.prototype.tick = function () {
         wrapElement.style.animation = 'blink-caret 0.75s step-end infinite';
     } else {
         // Fallback for browsers without animation support or missing keyframes
-        setInterval(() => {
-            wrapElement.style.borderColor = 
-                wrapElement.style.borderColor === 'transparent' ? 
-                'var(--text-color)' : 'transparent';
-        }, 750);
+        if (!this.intervalId) {
+            this.intervalId = setInterval(() => {
+                wrapElement.style.borderColor = 
+                    wrapElement.style.borderColor === 'transparent' ? 
+                    'var(--text-color)' : 'transparent';
+            }, 750);
+        }
     }
 
     this.el.innerHTML = '';
