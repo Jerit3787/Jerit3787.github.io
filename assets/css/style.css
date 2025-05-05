@@ -9,6 +9,7 @@
     --text-color-secondary: rgba(255, 255, 255, .6);
     --background-color: rgb(25, 25, 25);
     --card-color: rgb(38, 38, 38);
+    --dark-card-color: rgb(31, 31, 31);
     --border-radius: 8px;
     --transition: all 0.3s ease;
 }
@@ -21,6 +22,7 @@
     --text-color-secondary: rgba(0, 0, 0, .6);
     --background-color: #f5f5f5;
     --card-color: #ffffff;
+    --dark-card-color: #f0f0f0;
 }
 
 body {
@@ -618,6 +620,96 @@ nav .sidenav-trigger i {
     padding: 5rem 0;
 }
 
+/* Achievements Section */
+.achievements-container {
+    background-color: var(--secondary-color);
+    padding: 5rem 0;
+}
+
+.achievement-card {
+    background-color: var(--dark-card-color, #1f1f1f); /* Darker background color */
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add more prominent shadow */
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.achievement-content h5 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+.achievement-date {
+    color: var(--text-color-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.achievement-divider {
+    height: 2px;
+    background-color: var(--accent-color);
+    width: 40px;
+    margin: 0.5rem 0 1rem;
+}
+
+.achievement-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Standardized Chip Styling */
+.chip {
+    background-color: rgba(33, 150, 243, 0.15);
+    color: var(--accent-color);
+    border-radius: 16px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    height: auto;
+    line-height: normal;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.chip:hover {
+    background-color: rgba(33, 150, 243, 0.25);
+    transform: translateY(-2px);
+}
+
+.chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* Remove specific chip styling that will be replaced by standard styling */
+.achievement-content .chip,
+.experience-card .chip {
+    /* Override with standard styling */
+}
+
 .skill-card {
     background-color: var(--card-color);
     border-radius: var(--border-radius);
@@ -781,6 +873,10 @@ nav .sidenav-trigger i {
     margin: 0.3rem;
 }
 
+.experience-card .chip-container {
+    margin-top: 1.5rem;
+}
+
 /* Projects Section */
 .project-container {
     background-color: var(--secondary-color);
@@ -788,7 +884,7 @@ nav .sidenav-trigger i {
 }
 
 .project-card {
-    background-color: var(--card-color);
+    background-color: var(--dark-card-color, #1f1f1f); /* Darker background color */
     border-radius: var(--border-radius);
     overflow: hidden;
     height: 100%;
@@ -796,10 +892,12 @@ nav .sidenav-trigger i {
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add more prominent shadow */
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
 .project-card .card-image {
@@ -849,6 +947,11 @@ nav .sidenav-trigger i {
     font-size: 0.9rem;
     height: 36px;
     line-height: 36px;
+}
+
+.project-card .chip-container {
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
 .chip-container {
