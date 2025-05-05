@@ -135,6 +135,37 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Enhanced smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Close sidenav if it's open
+            var sidenav = M.Sidenav.getInstance(document.querySelector('.sidenav'));
+            if (sidenav && sidenav.isOpen) {
+                sidenav.close();
+            }
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip if it's just "#"
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Get the navbar height to offset the scroll position
+                const navbarHeight = document.querySelector('.navbar-fixed').offsetHeight;
+
+                // Calculate the position to scroll to
+                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
     // Check screen size and adjust body class for desktop view
     function adjustLayout() {
         if (window.innerWidth > 992) {
