@@ -111,6 +111,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize Materialize components
     M.AutoInit();
 
+    // Specifically initialize tooltips
+    var tooltipElems = document.querySelectorAll('.tooltipped');
+    var tooltipInstances = M.Tooltip.init(tooltipElems, {
+        enterDelay: 300,
+        exitDelay: 100,
+        position: 'top'
+    });
+
     // Set up sidenav for desktop and mobile
     var elems = document.querySelectorAll('.sidenav');
     var sidenavInstances = M.Sidenav.init(elems, {

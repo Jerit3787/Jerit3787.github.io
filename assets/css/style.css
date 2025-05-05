@@ -73,6 +73,78 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Disabled Resume Button Styles */
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+    pointer-events: none;
+}
+
+.tooltip-container .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Mobile touch support for tooltip */
+@media (max-width: 768px) {
+    .tooltip-container:active .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tooltip-container::before {
+        content: "Not Available";
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+}
+
+/* Disabled-looking button style */
+.disabled-looking {
+    background-color: #DFDFDF !important;
+    color: #9F9F9F !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+.disabled-looking:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
 /* Navigation */
 .navbar-fixed {
     position: sticky;
@@ -119,7 +191,7 @@ nav .sidenav-trigger i {
 
 /* Sidenav Styles */
 .sidenav {
-    background-color: #212121 !important;
+    background-color: var(--primary-color) !important;
     width: 100% !important;
     max-width: 100%;
     z-index: 1100 !important;
@@ -132,8 +204,7 @@ nav .sidenav-trigger i {
 
 .sidenav-header {
     position: relative;
-    background-color: #181818;
-    /* Darker background for the entire header section */
+    background-color: var(--secondary-color);
     padding-bottom: 15px;
 }
 
@@ -187,14 +258,14 @@ nav .sidenav-trigger i {
 }
 
 .name {
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .email {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-color-secondary);
     font-size: 14px;
 }
 
@@ -235,25 +306,26 @@ nav .sidenav-trigger i {
 }
 
 .sidenav-name {
-    color: white !important;
+    color: var(--text-color) !important;
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 2px;
 }
 
 .sidenav-email {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: var(--text-color-secondary) !important;
     font-size: 13px;
 }
 
 .sidenav-divider {
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--text-color-secondary);
+    opacity: 0.1;
     margin: 8px 0;
 }
 
 .sidenav li>a {
-    color: white !important;
+    color: var(--text-color) !important;
     display: flex;
     align-items: center;
     padding: 0 16px;
@@ -262,7 +334,7 @@ nav .sidenav-trigger i {
 }
 
 .sidenav li>a:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(127, 127, 127, 0.05);
 }
 
 .sidenav li>a>i {
@@ -283,7 +355,7 @@ nav .sidenav-trigger i {
 .sidenav-footer {
     width: 100%;
     padding: 16px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: auto;
 }
 
@@ -305,7 +377,7 @@ nav .sidenav-trigger i {
 }
 
 .social-mini-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(127, 127, 127, 0.1);
 }
 
 @media only screen and (min-width: 993px) {
@@ -437,6 +509,66 @@ nav .sidenav-trigger i {
     max-width: 300px;
     border-radius: 10px;
     margin-bottom: 1.5rem;
+}
+
+.resume-download {
+    margin-top: 1rem;
+    position: relative;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.resume-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+    pointer-events: none;
+}
+
+.resume-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.download-btn:hover .resume-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Mobile touch support for tooltip */
+@media (max-width: 768px) {
+    .download-btn:active .resume-tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .resume-download {
