@@ -1345,6 +1345,32 @@ nav .sidenav-trigger i {
     }
 }
 
+/* Typewriter Effect */
+.typewrite {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.typewrite .wrap {
+    border-right: 0.08em solid;
+    animation: blink-caret 0.75s step-end infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--text-color);
+    }
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 992px) {
     .container {

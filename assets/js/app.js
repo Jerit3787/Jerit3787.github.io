@@ -5,13 +5,12 @@ var TxtType = function (el, toRotate, period) {
     this.period = parseInt(period, 10) || 2000;
     this.txt = '';
     this.isDeleting = false;
-    this.isAnimating = true;
     this.tick();
 };
 
 TxtType.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+    const i = this.loopNum % this.toRotate.length;
+    const fullTxt = this.toRotate[i];
 
     if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -19,58 +18,39 @@ TxtType.prototype.tick = function () {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    var wrapElement = document.createElement('span');
+    // Create a wrapping element for the text
+    const wrapElement = document.createElement('span');
     wrapElement.classList.add('wrap');
     wrapElement.innerHTML = this.txt;
-
-    // Create a blinking cursor effect
-    wrapElement.style.borderRight = '0.08em solid';
     
-    // Check if animation is supported and if the animation keyframes are defined
-    if ('animation' in wrapElement.style && CSS.supports('animation', 'blink-caret 0.75s step-end infinite')) {
-        wrapElement.style.animation = 'blink-caret 0.75s step-end infinite';
-    } else {
-        // Fallback for browsers without animation support or missing keyframes
-        if (!this.intervalId) {
-            this.intervalId = setInterval(() => {
-                wrapElement.style.borderColor = 
-                    wrapElement.style.borderColor === 'transparent' ? 
-                    'var(--text-color)' : 'transparent';
-            }, 750);
-        }
-    }
-
+    // Clear previous content and add the new content
     this.el.innerHTML = '';
     this.el.appendChild(wrapElement);
 
     // Calculate a slightly variable typing speed for more natural effect
-    // Speed ranges from 70ms to 130ms for typing
     const baseSpeed = 100;
     const variability = 30;
-    const delta = baseSpeed + Math.floor(Math.random() * variability * 2) - variability;
+    let delta = baseSpeed + Math.floor(Math.random() * variability * 2) - variability;
 
     if (this.isDeleting) {
         delta /= 2; // Deletion is faster
     }
 
     if (!this.isDeleting && this.txt === fullTxt) {
-        const pauseDelta = 2000; // Pause at end of word
-        // Using arrow function to avoid 'that' reference
+        delta = this.period; // Pause at end of word
         setTimeout(() => {
             this.isDeleting = true;
             this.tick();
-        }, pauseDelta);
+        }, delta);
         return;
     } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        const pauseDelta = 500; // Pause before starting new word
-        // Using arrow function here too
-        setTimeout(() => this.tick(), pauseDelta);
+        delta = 500; // Pause before starting new word
+        setTimeout(() => this.tick(), delta);
         return;
     }
 
-    // Using arrow function for consistency
     setTimeout(() => this.tick(), delta);
 };
 
