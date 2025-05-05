@@ -5,168 +5,438 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Danish Hakim - Computer Science Student and Developer Portfolio">
+    <meta name="keywords" content="web development, programmer, portfolio, Danish Hakim, Malaysia">
+    <meta name="author" content="Danish Hakim">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Danish Hakim | Portfolio">
+    <meta property="og:description" content="Computer Science Student and Developer from Malaysia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.danplace.tech">
+    
     <!-- load requisite -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3-alpha/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj+KsslFkCOt3TvJrX2AV/Gc3wOqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3-alpha/dist/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="assets/js/app.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <title>Danish Hakim</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Danish Hakim | Portfolio</title>
 </head>
 
 <body>
     <div class="navbar-fixed" style="height: 56px;">
         <nav style="background-color: rgb(25, 25, 25); box-shadow: 0 0 0 0;">
-            <div class="nav-wrapper">
+            <div class="nav-wrapper container">
+                <a href="#home" class="brand-logo">DH</a>
                 <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a id="theme-toggle" class="btn-floating btn-small waves-effect waves-light">
+                        <i class="material-icons">brightness_4</i>
+                    </a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <ul class="sidenav" id="mobile-demo" style="background-color: #28282a;">
-        <li>
-            <div class="user-view">
-                <div class="background" style="background-color: #171718;">
-                </div>
-                <a href="#name"><span class="white-text name">Menu</span></a>
+    <ul class="sidenav sidenav-fixed" id="mobile-demo">
+        <div class="sidenav-header">
+            <div class="blue-header">
+                <img src="assets/img/myself.png" class="profile-img circle" alt="Danish Hakim">
+                <a href="#!" class="sidenav-close close-btn"><i class="material-icons white-text">close</i></a>
+            </div>
+            <div class="name-container">
+                <span class="name">Danish Hakim</span>
+                <span class="email">danish.hakim@danplace.tech</span>
+            </div>
+        </div>
+        <li><a href="#home" class="sidenav-close"><i class="material-icons blue-text">home</i>Home</a></li>
+        <li><a href="#about" class="sidenav-close"><i class="material-icons blue-text">account_circle</i>About</a></li>
+        <li><a href="#skills" class="sidenav-close"><i class="material-icons blue-text">code</i>Skills</a></li>
+        <li><a href="#projects" class="sidenav-close"><i class="material-icons blue-text">view_module</i>Projects</a></li>
+        <li><a href="#contact" class="sidenav-close"><i class="material-icons blue-text">contact_page</i>Contact</a></li>
+        <li class="sidenav-divider"></li>
+        <li><a href="#" id="mobile-theme-toggle" class="sidenav-close"><i class="material-icons blue-text">settings</i>Toggle Theme</a></li>
+        <li class="sidenav-spacer"></li>
+        <li class="sidenav-footer">
+            <div class="footer-social">
+                <a href="https://www.twitter.com/Jerit3787" target="_blank" class="social-mini-btn">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.github.com/Jerit3787" target="_blank" class="social-mini-btn">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/danish-hakim" target="_blank" class="social-mini-btn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
         </li>
-        <li style="margin-top: 5px;"><a style="color: white;" href="#home" class="sidenav-close"><i style="color: white" class="material-icons">home</i>Home</a></li>
-        <li style="margin-top: 5px;"><a style="color: white" href="#about" class="sidenav-close"><i style="color: white" class="material-icons">account_circle</i>About</a></li>
-        <li style="margin-top: 5px;"><a style="color: white" href="#projects" class="sidenav-close"><i style="color: white" class="material-icons">table_view</i>Projects</a></li>
-        <li style="margin-top: 5px;"><a style="color: white" href="#contact" class="sidenav-close"><i style="color: white" class="material-icons">contact_page</i>Contact</a></li>
     </ul>
     <div class="WebContainer">
         <div class="global-div intro-container global-div" id="home">
-            <h6 style="margin-bottom: 15px; color: #ffffff6c ;">Hi, my name is Danish and I am a</h6>
-            <h4 style="margin-top: 0;">
-                <a class="typewrite line-1 anim-typewriter" data-period="2000" data-type='[ "Student.", "Programmer.", "Developer."]'>
-                    <span class="wrap"></span>
-                </a>
-            </h4>
-        </div>
-        <div class="global-div section profile-container" id="about">
-            <div class="row">
-                <div class="col s12 m12 l4 setheight">
-                    <div class="flex-container-nofixed setheight">
-                        <img width="300" src="assets/img/myself.png">
+            <div class="container">
+                <div class="hero-content">
+                    <h6 class="subtitle">Hi, my name is Danish and I am a</h6>
+                    <h4 class="title">
+                        <a class="typewrite line-1 anim-typewriter" data-period="2000" data-type='[ "Student.", "Programmer.", "Developer.", "Tech Enthusiast." ]'>
+                            <span class="wrap"></span>
+                        </a>
+                    </h4>
+                    <p class="description">Passionate Computer Science student creating impactful digital solutions</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn waves-effect waves-light">View My Work</a>
+                        <a href="#contact" class="btn waves-effect waves-light">Get In Touch</a>
                     </div>
-                </div>
-                <div class="col s12 m12 l8 setheight">
-                    <div class="flex-container-nofixed setheight description">
-                        <h1>About Me</h1>
-                        <h5>Hi, my name is Mohammad Danish Hakim bin Mohd Nasir, a student from Malaysia.</h5>
-                        <h5>I do really like to explore new things which explains why I choose to persue into technology</h5>
-                        <h5>I am a self-tought programmer which I started when I was 10 years old</h5>
-                        <h5>I am currently studying for Bachelor of Computer Science in International Islamic University Malaysia (Gombak Campus)</h5>
+                    <div class="social-icons">
+                        <a href="https://www.twitter.com/Jerit3787" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.github.com/Jerit3787" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:danish.hakim@danplace.tech" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="global-div section skill-container" id="projects" style="padding: 20px">
-            <div class="row">
-                <div class="col s12 m12 l4">
-                    <div class="flex-container-nofixed">
-                        <h1>Projects</h1>
-                        <h5>Here are compilation of projects I've made in the past</h5>
+        <div class="global-div section profile-container" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12 l4 setheight">
+                        <div class="profile-image-container">
+                            <img class="profile-image responsive-img z-depth-2" src="assets/img/myself.png" alt="Danish Hakim">
+                            <div class="resume-download">
+                                <a href="#" class="btn waves-effect waves-light download-btn"><i class="material-icons left">file_download</i>Download Resume</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l8 setheight">
+                        <div class="about-content">
+                            <h2 class="section-title">About Me</h2>
+                            <div class="divider"></div>
+                            <p class="flow-text about-text">Hi, I'm Mohammad Danish Hakim bin Mohd Nasir, a Computer Science student from Malaysia with a passion for technology and innovation.</p>
+                            <p class="about-text">I've been programming since I was 10 years old, constantly exploring new technologies and building projects that solve real-world problems. My curiosity and love for learning drive me to stay up-to-date with the latest developments in technology.</p>
+                            <p class="about-text">Currently, I'm pursuing my Bachelor of Computer Science at International Islamic University Malaysia (Gombak Campus), where I'm expanding my knowledge in software development, algorithms, and system architecture.</p>
+                            <div class="personal-info">
+                                <div class="info-item">
+                                    <i class="material-icons">school</i>
+                                    <span>Computer Science, IIUM</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="material-icons">location_on</i>
+                                    <span>Malaysia</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="material-icons">email</i>
+                                    <span>danish.hakim@danplace.tech</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col s12 m12 l8">
-                    <div class="col s12 m12 l6">
-                        <div class="row">
-                            <div class="col s12 m12">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="assets/img/project6.png">
+            </div>
+        </div>
+        <div class="global-div section skills-container" id="skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2 class="section-title center-align">Skills & Expertise</h2>
+                        <div class="divider"></div>
+                        <p class="flow-text center-align">A set of my technical skills and competencies</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <div class="skill-card z-depth-1">
+                            <div class="skill-card-header">
+                                <i class="fas fa-code skill-icon"></i>
+                                <h5>Frontend Development</h5>
+                            </div>
+                            <div class="skill-card-content">
+                                <div class="skill-item">
+                                    <span>HTML/CSS</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 95%"></div>
                                     </div>
-                                    <div class="card-content">
-                                        <span class="card-title">Project Stutastic v3</span>
-                                        <p>Built using HTML, CSS & JS. Used libraries from firebase-api & materialize</p>
+                                </div>
+                                <div class="skill-item">
+                                    <span>JavaScript</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Responsive Design</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 85%"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m12 l6">
-                        <div class="row">
-                            <div class="col s12 m12">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="assets/img/project5.png">
+                    <div class="col s12 m6 l4">
+                        <div class="skill-card z-depth-1">
+                            <div class="skill-card-header">
+                                <i class="fas fa-server skill-icon"></i>
+                                <h5>Backend Development</h5>
+                            </div>
+                            <div class="skill-card-content">
+                                <div class="skill-item">
+                                    <span>Java</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 85%"></div>
                                     </div>
-                                    <div class="card-content">
-                                        <span class="card-title">Project Stutastic v2</span>
-                                        <p>Built using HTML, CSS & JS. Used libraries from firebase-api & materialize</p>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Firebase</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Database Design</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 75%"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m12 l6">
-                        <div class="row">
-                            <div class="col s12 m12">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="assets/img/project1.png">
+                    <div class="col s12 m6 l4">
+                        <div class="skill-card z-depth-1">
+                            <div class="skill-card-header">
+                                <i class="fas fa-tools skill-icon"></i>
+                                <h5>Tools & Technologies</h5>
+                            </div>
+                            <div class="skill-card-content">
+                                <div class="skill-item">
+                                    <span>Git/GitHub</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 80%"></div>
                                     </div>
-                                    <div class="card-content">
-                                        <span class="card-title">Project Stutastic v1</span>
-                                        <p>Built using HTML, CSS & JS. Used libraries from firebase-api & material-design-lite</p>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Material Design</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span>Responsive Frameworks</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 85%"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m12 l6">
-                        <div class="row">
-                            <div class="col s12 m12">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="assets/img/project2.png">
-                                    </div>
-                                    <div class="card-content">
-                                        <span class="card-title">Student Planner</span>
-                                        <p>Built using HTML, CSS & JS. Used libraries from firebase-api & materialize</p>
-                                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="global-div section project-container" id="projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2 class="section-title center-align">My Projects</h2>
+                        <div class="divider"></div>
+                        <p class="flow-text center-align">A collection of my recent work and projects</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <div class="card hoverable project-card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/img/project6.png" alt="Project Stutastic v3">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">Project Stutastic v3<i class="material-icons right">more_vert</i></span>
+                                <p>Student statistics management system with analytical features</p>
+                                <div class="card-action">
+                                    <a href="https://jerit3787.github.io/stutastic" target="_blank" class="project-link">Live Demo</a>
+                                    <a href="https://github.com/Jerit3787/stutastic" target="_blank" class="project-link">GitHub</a>
                                 </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">Project Stutastic v3<i class="material-icons right">close</i></span>
+                                <p>Built using HTML, CSS & JS with Firebase backend integration</p>
+                                <p>Features include:</p>
+                                <ul>
+                                    <li>Student data management</li>
+                                    <li>Statistical analysis</li>
+                                    <li>Real-time data updates</li>
+                                    <li>Responsive Material Design UI</li>
+                                </ul>
+                                <div class="chip">HTML5</div>
+                                <div class="chip">CSS3</div>
+                                <div class="chip">JavaScript</div>
+                                <div class="chip">Firebase</div>
+                                <div class="chip">Materialize</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m12 l6">
-                        <div class="row">
-                            <div class="col s12 m12">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="assets/img/project3.png">
-
-                                    </div>
-                                    <div class="card-content">
-                                        <span class="card-title">bpn project</span>
-                                        <p>Built using Java. Used libraries from material-design-lite & JFrame</p>
-                                    </div>
+                    
+                    <div class="col s12 m6 l4">
+                        <div class="card hoverable project-card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/img/project5.png" alt="Project Stutastic v2">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">Project Stutastic v2<i class="material-icons right">more_vert</i></span>
+                                <p>Improved version with enhanced UI and features</p>
+                                <div class="card-action">
+                                    <a href="https://jerit3787.github.io/stutastic/v2" target="_blank" class="project-link">Live Demo</a>
+                                    <a href="https://github.com/Jerit3787/stutastic" target="_blank" class="project-link">GitHub</a>
                                 </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">Project Stutastic v2<i class="material-icons right">close</i></span>
+                                <p>Built using HTML, CSS & JS with Firebase backend integration</p>
+                                <p>Major improvements over v1 including:</p>
+                                <ul>
+                                    <li>Enhanced UI with Material Design</li>
+                                    <li>Better data organization</li>
+                                    <li>Performance optimizations</li>
+                                    <li>Improved mobile responsiveness</li>
+                                </ul>
+                                <div class="chip">HTML5</div>
+                                <div class="chip">CSS3</div>
+                                <div class="chip">JavaScript</div>
+                                <div class="chip">Firebase</div>
+                                <div class="chip">Materialize</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m12 l6">
-                        <div class="row">
-                            <div class="col s12 m12">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="assets/img/project4.png">
-                                    </div>
-                                    <div class="card-content">
-                                        <span class="card-title">MathsQuiz</span>
-                                        <p>Built using HTML, CSS & JS. No libraries were used. Only pure CSS & JS</p>
-                                    </div>
+                    
+                    <div class="col s12 m6 l4">
+                        <div class="card hoverable project-card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/img/project1.png" alt="Project Stutastic v1">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">Project Stutastic v1<i class="material-icons right">more_vert</i></span>
+                                <p>Initial version of the student statistics system</p>
+                                <div class="card-action">
+                                    <a href="https://jerit3787.github.io/stutastic/v1" target="_blank" class="project-link">Live Demo</a>
+                                    <a href="https://github.com/Jerit3787/stutastic" target="_blank" class="project-link">GitHub</a>
                                 </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">Project Stutastic v1<i class="material-icons right">close</i></span>
+                                <p>Built using HTML, CSS & JS with Material Design Lite and Firebase</p>
+                                <p>First iteration featuring:</p>
+                                <ul>
+                                    <li>Basic student data management</li>
+                                    <li>Simple statistics display</li>
+                                    <li>Firebase database integration</li>
+                                </ul>
+                                <div class="chip">HTML5</div>
+                                <div class="chip">CSS3</div>
+                                <div class="chip">JavaScript</div>
+                                <div class="chip">Firebase</div>
+                                <div class="chip">MDL</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col s12 m6 l4">
+                        <div class="card hoverable project-card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/img/project2.png" alt="Student Planner">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">Student Planner<i class="material-icons right">more_vert</i></span>
+                                <p>Task management and planning tool for students</p>
+                                <div class="card-action">
+                                    <a href="https://jerit3787.github.io/planner" target="_blank" class="project-link">Live Demo</a>
+                                    <a href="https://github.com/Jerit3787/planner" target="_blank" class="project-link">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">Student Planner<i class="material-icons right">close</i></span>
+                                <p>Built using HTML, CSS & JS with Materialize and Firebase</p>
+                                <p>Features include:</p>
+                                <ul>
+                                    <li>Task scheduling and reminders</li>
+                                    <li>Course organization</li>
+                                    <li>Calendar integration</li>
+                                    <li>Due date tracking</li>
+                                </ul>
+                                <div class="chip">HTML5</div>
+                                <div class="chip">CSS3</div>
+                                <div class="chip">JavaScript</div>
+                                <div class="chip">Firebase</div>
+                                <div class="chip">Materialize</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col s12 m6 l4">
+                        <div class="card hoverable project-card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/img/project3.png" alt="BPN Project">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">BPN Project<i class="material-icons right">more_vert</i></span>
+                                <p>Java-based application with Material Design interface</p>
+                                <div class="card-action">
+                                    <a href="https://github.com/Jerit3787/bpn-project" target="_blank" class="project-link">GitHub</a>
+                                    <a href="#" class="project-link disabled">Java App</a>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">BPN Project<i class="material-icons right">close</i></span>
+                                <p>Built using Java with Material Design and JFrame</p>
+                                <p>Key components:</p>
+                                <ul>
+                                    <li>Java Swing application</li>
+                                    <li>Custom UI implementation</li>
+                                    <li>Data processing modules</li>
+                                    <li>Material Design elements</li>
+                                </ul>
+                                <div class="chip">Java</div>
+                                <div class="chip">Swing</div>
+                                <div class="chip">JFrame</div>
+                                <div class="chip">Material Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col s12 m6 l4">
+                        <div class="card hoverable project-card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/img/project4.png" alt="MathsQuiz">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">MathsQuiz<i class="material-icons right">more_vert</i></span>
+                                <p>Interactive mathematics quiz web application</p>
+                                <div class="card-action">
+                                    <a href="https://jerit3787.github.io/mathsquiz" target="_blank" class="project-link">Live Demo</a>
+                                    <a href="https://github.com/Jerit3787/mathsquiz" target="_blank" class="project-link">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">MathsQuiz<i class="material-icons right">close</i></span>
+                                <p>Built using vanilla HTML, CSS & JS with no external libraries</p>
+                                <p>Features include:</p>
+                                <ul>
+                                    <li>Randomized math problems</li>
+                                    <li>Difficulty levels</li>
+                                    <li>Score tracking</li>
+                                    <li>Pure CSS animations</li>
+                                </ul>
+                                <div class="chip">HTML5</div>
+                                <div class="chip">CSS3</div>
+                                <div class="chip">JavaScript</div>
+                                <div class="chip">ES6</div>
                             </div>
                         </div>
                     </div>
@@ -174,59 +444,79 @@
             </div>
         </div>
         <div class="global-div section contact-container" id="contact">
-            <div class="row">
-                <div class="col s12 m12 l12">
-                    <div class="flex-container-nofixed">
-                        <h2 class="center-align">Contact Me</h2>
-                        <h6 class="center-align">I'm available to be contacted using any of these medium</h6>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2 class="section-title center-align">Contact Me</h2>
+                        <div class="divider"></div>
+                        <p class="flow-text center-align">Let's connect and discuss how we can work together</p>
                     </div>
                 </div>
-                <div class="col s12 m12 l12">
-                    <a class="flex-container" href="https://www.twitter.com/Jerit3787">
-                        <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADaklEQVRoge2ZTYhVZRjHf4+TNUFN2jjVBFERjJjkcmoTFhQuyk27osBFi2hMQQQrhKBFEEQtrGjTx6pFQdJA20wopA8qtA/SpIWCiU7NqEzMVebX4r3djmeO9557Pec2xP3BC/c+5z3v83/e87zn/TgwYMCAvqNuVF9XD6oz6l/qr+q0ukUdKdHGcDljhagb1H125pQ6pQ4VtDGuvqZuy18YVX9Qb6tJ/CPquRLis3yijqhXq5vUt5tP64R6Xd7BzuZNP6ujFYt/QD3fpfh/OKkuZP4vqpuLnHyaqXRQvbki8WPqHz2KL2JHpu2JFRlf6zO/7wK+UNdWEMNuYHUF7cwDW4ED6rPqIeCO1lW1URDtnPpYrx5Nudtt3l+KWS9Ow115Z+0cvWcP40LdXJH4PO+okXf2Y4ebZtSt6hVdBPBcDeLfUFupnx0Dn3fQcz2wBzisblevLRHDTWWDLclTETEVEYtLrphmx26YVd9VH1avKvKmvlll1xf5iJzDfcB9PfTMOeDrZvkGOA4cA54EXuihvSIaEbGko/IB3AJ8T0qX5cZMRKzJG1tjQB2JiGPAFmChn8pKMldkzA7io+r7wCpgB3CmH6q64LciY/aVOAc82izLkaNFxuwT+KpPQnrl2yJjNoDpPgnplQNFxtZbSF0JHAFu7ZeiLpgBbiiawFpPICLOA9vyFZYJHxfOvlycQkTENPBKXyR1x97SNdVQXzLtfJYDx03pXciKvCEijIjngU3Adz31V7W81Uzv8qhr1JXqsPqEaZ/8X3BGHWun9VJr+/uBD7qKuh5ejYhT7SpEkVG9EviJ7J6z/5wEJiKi7ZJmyRgAiIgG8AxQuAbvE1OdxHfEeraEZagufU374IVOHivksLqqsgCaQdypfqReqFn8WXV9Z0X/UjiI2wQyTtpyrgMeB27v5v4OzAMPRcRnFba5FNPp8N6Ke35efbBu4atNR3p/Viz+hDpZl+ghdVLdY8rPqvnSdJDQM6FuAIZJ42GsWcaBSWAjaY9cNQ3gReDliLhwWS2Z1jxPq7/X0MN5Fk1vs3WVdEMukGtME9eRGoQvqB+qd1cuvCCQUO81fc45fRmiG+p+05efG+vS23YeMB1hTwD3NMta0qndaLMMkY4VZ0n71l9Ii8BDwP6IOFuX8AEDBvxP+BvEUMGNUHf4AAAAAABJRU5ErkJggg==">
-                        <h6 class="text">@Jerit3787</h6>
-                    </a>
-                    <a class="flex-container" href="https://www.github.com/Jerit3787">
-                        <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABf0lEQVRIidWUvy9DURTHz+sPNJIaxWCwUYngb5D4UQ1Rk8Hm35BIgzAa2cRkMjDYzNaGUDahGonEwqQfQ9+Nl+P03Vdbv8vLu+f7495zT65ItyOIKwJpEZkTkVURmRKR4VBTF5FrETkXkbMgCL47TgZmgXv8eASKnRgHwBbQTGDu0AT2gdiOuIBKB8YaFZ95UQmmgRJQNcxqQBkYVevz7cwztPoZRTas5YDJ8JsDJoCBsJZWmjun0wHLxi5HErR00NCVXD0V4ZaV9kFa4+jDh4jU1Jr2EgFu1C5WEpg77ZLSVi3SmyLlOwjIK+27q0Vb1JPU0ICe/z4r4EmR7HGzsaD+G38YwIk65jMw5nMGCsCL0p5aRGtMv4AdoGDwx4HdkKOxbgVk+X3cNoGLiODA4B8bxgB1oLfdcRdpPVyfwBBwCbwCQ21OYGHN19PtkLjn4aUM88NY81DonmuAW+AqhhvFEZDxBkTEM+5OPAEN81IThqQAPePR+gbQ/y/zrsEP1eHzrxJ45MAAAAAASUVORK5CYII=">
-                        <h6 class="text">@Jerit3787</h6>
-                    </a>
-                    <a class="flex-container" href="mailto:danish.hakim@danplace.tech">
-                        <span class="material-icons icon">email</span>
-                        <h6 class="text">danish.hakim@danplace.tech</h6>
-                    </a>
+                <div class="row">
+                    <div class="col s12 m8 offset-m2">
+                        <div class="card contact-card z-depth-1">
+                            <div class="card-content center-align">
+                                <i class="material-icons large accent-text">email</i>
+                                <h4>Get In Touch</h4>
+                                <p class="flow-text">Feel free to reach out for collaborations, project inquiries, or just to say hello!</p>
+                                
+                                <div class="contact-email">
+                                    <a href="mailto:danish.hakim@danplace.tech" class="btn-large waves-effect waves-light email-btn">
+                                        <i class="material-icons left">send</i>
+                                        Send Me an Email
+                                    </a>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <i class="material-icons">location_on</i>
+                                    <span>Malaysia</span>
+                                </div>
+                                
+                                <div class="social-links">
+                                    <a href="https://www.twitter.com/Jerit3787" target="_blank" class="social-btn">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.github.com/Jerit3787" target="_blank" class="social-btn">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/danish-hakim" target="_blank" class="social-btn">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <footer class="page-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col l6 s12">
-                            <h5 class="white-text">danplace.tech</h5>
+                            <h5 class="white-text">Danish Hakim</h5>
                             <p class="grey-text text-lighten-4">
-                                A personal project page for Danish Hakim
-                                <br>
-                                <br> Built using HTML & SASS. Used libraries from materialize & JQuery.
+                                Computer Science student and web developer passionate about creating digital experiences that make a difference.
                             </p>
+                            <p class="grey-text text-lighten-4">Built with HTML, CSS, JavaScript and Materialize CSS framework.</p>
                         </div>
                         <div class="col l4 offset-l2 s12">
-                            <h5 class="white-text">Links</h5>
+                            <h5 class="white-text">Quick Links</h5>
                             <ul>
-                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/projects">> All Project Repository</a></li>
-                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/ctf">> CTF Writeup Blog</a</li>
-                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/stutastic-site">> Stutastic Project</a></li>
-                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/planner">> Student Planner Project</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/projects"><i class="fas fa-external-link-alt"></i> Project Repository</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/htmlprojects"><i class="fas fa-external-link-alt"></i> Web Projects</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/stutastic"><i class="fas fa-external-link-alt"></i> Stutastic Project</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/planner"><i class="fas fa-external-link-alt"></i> Student Planner</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="footer-copyright">
                     <div class="container">
-                       Copyright © 2021-2025 Danish Studio Production
-                        <a class="grey-text text-lighten-4 right" href="https://jerit3787.github.io/links">Other Links</a>
+                        © 2021-2025 Danish Hakim | All Rights Reserved
+                        <a class="grey-text text-lighten-4 right" href="https://jerit3787.github.io/links">More Links</a>
                     </div>
                 </div>
             </footer>
         </div>
-        <div class="global-div section ending-container"></div>
     </div>
 </body>
 
