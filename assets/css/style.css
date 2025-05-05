@@ -149,8 +149,11 @@ body {
 
 /* Navigation */
 .navbar-fixed {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -627,7 +630,8 @@ nav .sidenav-trigger i {
 }
 
 .achievement-card {
-    background-color: var(--dark-card-color, #1f1f1f); /* Darker background color */
+    background-color: var(--dark-card-color, #1f1f1f);
+    /* Darker background color */
     border-radius: var(--border-radius);
     padding: 1.5rem;
     height: 100%;
@@ -636,12 +640,14 @@ nav .sidenav-trigger i {
     margin-bottom: 2rem;
     transition: var(--transition);
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add more prominent shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add more prominent shadow */
 }
 
 .achievement-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Darker shadow on hover */
 }
 
 .achievement-icon {
@@ -884,7 +890,8 @@ nav .sidenav-trigger i {
 }
 
 .project-card {
-    background-color: var(--dark-card-color, #1f1f1f); /* Darker background color */
+    background-color: var(--dark-card-color, #1f1f1f);
+    /* Darker background color */
     border-radius: var(--border-radius);
     overflow: hidden;
     height: 100%;
@@ -892,12 +899,14 @@ nav .sidenav-trigger i {
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add more prominent shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add more prominent shadow */
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Darker shadow on hover */
 }
 
 .project-card .card-image {
