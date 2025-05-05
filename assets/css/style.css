@@ -697,11 +697,32 @@ nav .sidenav-trigger i {
     display: inline-flex;
     align-items: center;
     transition: var(--transition);
+    border: 1px solid rgba(33, 150, 243, 0.3);  /* Add border for better visibility */
+}
+
+.light-theme .chip {
+    background-color: rgba(33, 150, 243, 0.1);  /* Lighter background for light mode */
+    border: 1px solid rgba(33, 150, 243, 0.4);  /* Slightly darker border for light mode */
+    color: #1976D2;  /* Darker blue for better contrast in light mode */
 }
 
 .chip:hover {
     background-color: rgba(33, 150, 243, 0.25);
     transform: translateY(-2px);
+}
+
+/* Override the experience card chips to match standardized style */
+.experience-card .chip {
+    background-color: rgba(33, 150, 243, 0.15);  /* Use standard blue background */
+    color: var(--accent-color);  /* Use accent color instead of text color */
+    border: 1px solid rgba(33, 150, 243, 0.3);  /* Add border for visibility */
+    margin: 0.3rem;
+}
+
+.light-theme .experience-card .chip {
+    background-color: rgba(33, 150, 243, 0.1);  /* Lighter background for light mode */
+    border: 1px solid rgba(33, 150, 243, 0.4);  /* Slightly darker border for light mode */
+    color: #1976D2;  /* Darker blue for better contrast in light mode */
 }
 
 .chip-container {
@@ -871,12 +892,6 @@ nav .sidenav-trigger i {
 .experience-list li {
     margin-bottom: 0.5rem;
     list-style-type: disc;
-}
-
-.experience-card .chip {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    margin: 0.3rem;
 }
 
 .experience-card .chip-container {
