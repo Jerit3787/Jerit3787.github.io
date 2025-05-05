@@ -969,6 +969,146 @@ nav .sidenav-trigger i {
     margin-top: 1rem;
 }
 
+/* CTF Writeups & Web Exploitation Section */
+.ctf-container {
+    background-color: var(--primary-color);
+    padding: 5rem 0;
+}
+
+.ctf-card {
+    background-color: var(--dark-card-color);
+    border-radius: var(--border-radius);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ctf-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ctf-card .card-content {
+    padding: 1.5rem;
+    color: var(--text-color);
+    flex: 1;
+}
+
+.ctf-card .card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.ctf-date {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+.ctf-image-placeholder {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctf-image-placeholder i {
+    font-size: 3rem;
+    color: white;
+}
+
+/* Enhanced achievement styling for Web Exploitation */
+.achievement-card.web-exploit {
+    border-left: 3px solid var(--accent-color);
+}
+
+.achievement-card .web-exploit-icon {
+    background-color: rgba(33, 150, 243, 0.15);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.achievement-card .web-exploit-icon i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.web-exploit-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.exploit-tag {
+    display: inline-block;
+    background-color: rgba(255, 59, 48, 0.15);
+    color: #ff3b30;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 3px 8px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.methodology-list {
+    margin-top: 1rem;
+}
+
+.methodology-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.methodology-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Custom chip styling for CTF categories */
+.chip.ctf-category {
+    background-color: rgba(33, 150, 243, 0.15);
+    color: var(--accent-color);
+}
+
+.chip.xss {
+    background-color: rgba(255, 59, 48, 0.15);
+    color: #ff3b30;
+}
+
+.chip.sqli {
+    background-color: rgba(255, 149, 0, 0.15);
+    color: #ff9500;
+}
+
+.chip.jwt {
+    background-color: rgba(88, 86, 214, 0.15);
+    color: #5856d6;
+}
+
+.chip.crypto {
+    background-color: rgba(52, 199, 89, 0.15);
+    color: #34c759;
+}
+
+.chip.web-security {
+    background-color: rgba(175, 82, 222, 0.15);
+    color: #af52de;
+}
+
 /* Contact Section */
 .contact-container {
     background-color: var(--primary-color);
