@@ -26,8 +26,8 @@ TxtType.prototype.tick = function () {
     // Create a blinking cursor effect
     wrapElement.style.borderRight = '0.08em solid';
     
-    // Check if animation is supported and if the animation is defined in CSS
-    if ('animation' in wrapElement.style && document.querySelector('@keyframes blink-caret')) {
+    // Check if animation is supported and if the animation keyframes are defined
+    if ('animation' in wrapElement.style && CSS.supports('animation', 'blink-caret 0.75s step-end infinite')) {
         wrapElement.style.animation = 'blink-caret 0.75s step-end infinite';
     } else {
         // Fallback for browsers without animation support or missing keyframes
