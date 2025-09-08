@@ -433,7 +433,7 @@ nav .sidenav-trigger i {
 
 /* Home/Intro Section */
 .intro-container {
-    min-height: calc(100vh - 56px);
+    min-height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1422,5 +1422,216 @@ nav .sidenav-trigger i {
     .project-card .card-action {
         flex-direction: column;
         gap: 0.5rem;
+    }
+}
+
+/* Image Modal Styles */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.image-modal.closing {
+    animation: fadeOut 0.3s ease;
+}
+
+.image-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoomIn 0.3s ease;
+    transition: transform 0.2s ease;
+    cursor: zoom-in;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.image-modal.closing .image-modal-content {
+    animation: zoomOut 0.3s ease;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 10001;
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-modal-close:hover,
+.image-modal-close:focus {
+    color: #fff;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.image-modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    padding: 15px 20px;
+    height: auto;
+    min-height: 60px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Zoom and Pan Instructions */
+.image-modal::before {
+    content: "Scroll to zoom • Double-click to zoom • Drag to pan • Press R to reset • Press Esc to close";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeInInstructions 0.5s ease 1s forwards;
+}
+
+@keyframes fadeInInstructions {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.clickable-image {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.clickable-image:hover {
+    transform: scale(1.05);
+}
+
+@keyframes zoomIn {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 700px) {
+    .image-modal-content {
+        width: 95%;
+    }
+
+    .image-modal-caption {
+        width: 95%;
+        bottom: 10px;
+        padding: 12px 15px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .image-modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Mobile instructions */
+    .image-modal::before {
+        content: "Pinch to zoom • Drag to pan • Double-tap to zoom • Tap × to close";
+        font-size: 11px;
+        padding: 6px 12px;
+        top: 15px;
     }
 }
