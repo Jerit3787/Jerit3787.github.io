@@ -206,3 +206,59 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(fadeIn);
     });
 });
+
+// Image Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Get modal elements
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const captionText = document.getElementById('imageCaption');
+    const closeBtn = document.getElementsByClassName('image-modal-close')[0];
+
+    // Add click event to all images that should be enlargeable
+    const enlargeableImages = document.querySelectorAll('.profile-image, .card-image img, img[src*="project"]');
+    
+    enlargeableImages.forEach(function(img) {
+        // Add clickable class for hover effect
+        img.classList.add('clickable-image');
+        
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Function to close modal with animation
+    function closeModal() {
+        modal.classList.add('closing');
+        
+        setTimeout(function() {
+            modal.style.display = 'none';
+            modal.classList.remove('closing');
+            document.body.style.overflow = 'auto';
+        }, 300); // Match the animation duration
+    }
+
+    // Close modal when clicking the X
+    closeBtn.addEventListener('click', function() {
+        closeModal();
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
+});
