@@ -433,7 +433,7 @@ nav .sidenav-trigger i {
 
 /* Home/Intro Section */
 .intro-container {
-    min-height: calc(100vh - 56px);
+    min-height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1435,7 +1435,7 @@ nav .sidenav-trigger i {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     animation: fadeIn 0.3s ease;
     transition: opacity 0.3s ease;
 }
@@ -1485,14 +1485,14 @@ nav .sidenav-trigger i {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .image-modal-close:hover,
 .image-modal-close:focus {
     color: #fff;
     opacity: 1;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     transform: scale(1.1);
 }
 
@@ -1511,11 +1511,11 @@ nav .sidenav-trigger i {
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 0.3s ease;
-    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
     border-radius: 8px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     font-size: 16px;
     line-height: 1.4;
 }
@@ -1527,9 +1527,9 @@ nav .sidenav-trigger i {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: 8px 16px;
     border-radius: 4px;
     backdrop-filter: blur(5px);
@@ -1541,8 +1541,15 @@ nav .sidenav-trigger i {
 }
 
 @keyframes fadeInInstructions {
-    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 .clickable-image {
@@ -1559,6 +1566,7 @@ nav .sidenav-trigger i {
         transform: translate(-50%, -50%) scale(0);
         opacity: 0;
     }
+
     to {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
@@ -1570,6 +1578,7 @@ nav .sidenav-trigger i {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
+
     to {
         transform: translate(-50%, -50%) scale(0);
         opacity: 0;
@@ -1577,13 +1586,23 @@ nav .sidenav-trigger i {
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 /* Responsive adjustments */
@@ -1591,6 +1610,7 @@ nav .sidenav-trigger i {
     .image-modal-content {
         width: 95%;
     }
+
     .image-modal-caption {
         width: 95%;
         bottom: 10px;
@@ -1598,6 +1618,7 @@ nav .sidenav-trigger i {
         font-size: 14px;
         border-radius: 6px;
     }
+
     .image-modal-close {
         top: 10px;
         right: 15px;
@@ -1605,7 +1626,7 @@ nav .sidenav-trigger i {
         width: 40px;
         height: 40px;
     }
-    
+
     /* Mobile instructions */
     .image-modal::before {
         content: "Pinch to zoom • Drag to pan • Double-tap to zoom • Tap × to close";
