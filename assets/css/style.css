@@ -1456,7 +1456,12 @@ nav .sidenav-trigger i {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: zoomIn 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
+    cursor: zoom-in;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .image-modal.closing .image-modal-content {
@@ -1513,6 +1518,31 @@ nav .sidenav-trigger i {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     font-size: 16px;
     line-height: 1.4;
+}
+
+/* Zoom and Pan Instructions */
+.image-modal::before {
+    content: "Scroll to zoom • Double-click to zoom • Drag to pan • Press R to reset • Press Esc to close";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    background: rgba(0,0,0,0.6);
+    padding: 8px 16px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeInInstructions 0.5s ease 1s forwards;
+}
+
+@keyframes fadeInInstructions {
+    from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 .clickable-image {
@@ -1574,5 +1604,13 @@ nav .sidenav-trigger i {
         font-size: 30px;
         width: 40px;
         height: 40px;
+    }
+    
+    /* Mobile instructions */
+    .image-modal::before {
+        content: "Pinch to zoom • Drag to pan • Double-tap to zoom • Tap × to close";
+        font-size: 11px;
+        padding: 6px 12px;
+        top: 15px;
     }
 }

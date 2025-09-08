@@ -207,13 +207,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Image Modal Functionality
+// Image Modal Functionality with Zoom and Pan
 document.addEventListener('DOMContentLoaded', function() {
     // Get modal elements
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const captionText = document.getElementById('imageCaption');
     const closeBtn = document.getElementsByClassName('image-modal-close')[0];
+
+    // Zoom and pan variables
+    let scale = 1;
+    let panning = false;
+    let pointX = 0;
+    let pointY = 0;
+    let start = { x: 0, y: 0 };
+    let transformX = 0;
+    let transformY = 0;
 
     // Add click event to all images that should be enlargeable
     const enlargeableImages = document.querySelectorAll('.profile-image, .card-image img, img[src*="project"]');
@@ -227,10 +236,22 @@ document.addEventListener('DOMContentLoaded', function() {
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
             
+            // Reset zoom and pan
+            resetZoomAndPan();
+            
             // Prevent body scroll when modal is open
             document.body.style.overflow = 'hidden';
         });
     });
+
+    // Reset zoom and pan function
+    function resetZoomAndPan() {
+        scale = 1;
+        transformX = 0;
+        transformY = 0;
+        modalImg.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        modalImg.style.cursor = 'zoom-in';
+    }
 
     // Function to close modal with animation
     function closeModal() {
@@ -240,7 +261,138 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
             modal.classList.remove('closing');
             document.body.style.overflow = 'auto';
+            resetZoomAndPan();
         }, 300); // Match the animation duration
+    }
+
+    // Zoom functionality with mouse wheel
+    modalImg.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        
+        const rect = modalImg.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const offsetY = e.clientY - rect.top;
+        
+        const delta = e.deltaY > 0 ? -0.1 : 0.1;
+        const newScale = Math.min(Math.max(1, scale + delta), 3); // Limit scale between 1 and 3
+        
+        if (newScale !== scale) {
+            const scaleChange = newScale / scale;
+            
+            // Adjust transform to zoom toward mouse position
+            transformX = offsetX - (offsetX - transformX) * scaleChange;
+            transformY = offsetY - (offsetY - transformY) * scaleChange;
+            
+            scale = newScale;
+            updateTransform();
+            
+            // Update cursor based on zoom level
+            modalImg.style.cursor = scale > 1 ? 'grab' : 'zoom-in';
+        }
+    });
+
+    // Double-click to zoom in/out
+    modalImg.addEventListener('dblclick', function(e) {
+        if (scale === 1) {
+            // Zoom in to 2x at click position
+            const rect = modalImg.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const offsetY = e.clientY - rect.top;
+            
+            scale = 2;
+            transformX = offsetX - offsetX * 2;
+            transformY = offsetY - offsetY * 2;
+        } else {
+            // Reset zoom
+            scale = 1;
+            transformX = 0;
+            transformY = 0;
+        }
+        
+        updateTransform();
+        modalImg.style.cursor = scale > 1 ? 'grab' : 'zoom-in';
+    });
+
+    // Panning functionality
+    modalImg.addEventListener('mousedown', function(e) {
+        if (scale > 1) {
+            e.preventDefault();
+            panning = true;
+            start = { x: e.clientX - transformX, y: e.clientY - transformY };
+            modalImg.style.cursor = 'grabbing';
+        }
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (!panning) return;
+        e.preventDefault();
+        
+        transformX = e.clientX - start.x;
+        transformY = e.clientY - start.y;
+        updateTransform();
+    });
+
+    document.addEventListener('mouseup', function() {
+        if (panning) {
+            panning = false;
+            modalImg.style.cursor = scale > 1 ? 'grab' : 'zoom-in';
+        }
+    });
+
+    // Touch support for mobile devices
+    let initialDistance = 0;
+    let initialScale = 1;
+
+    modalImg.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 2) {
+            // Pinch zoom start
+            e.preventDefault();
+            initialDistance = getDistance(e.touches[0], e.touches[1]);
+            initialScale = scale;
+        } else if (e.touches.length === 1 && scale > 1) {
+            // Pan start
+            e.preventDefault();
+            panning = true;
+            start = { x: e.touches[0].clientX - transformX, y: e.touches[0].clientY - transformY };
+        }
+    });
+
+    modalImg.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        
+        if (e.touches.length === 2) {
+            // Pinch zoom
+            const currentDistance = getDistance(e.touches[0], e.touches[1]);
+            const newScale = Math.min(Math.max(1, initialScale * (currentDistance / initialDistance)), 3);
+            
+            if (newScale !== scale) {
+                scale = newScale;
+                updateTransform();
+            }
+        } else if (e.touches.length === 1 && panning) {
+            // Pan
+            transformX = e.touches[0].clientX - start.x;
+            transformY = e.touches[0].clientY - start.y;
+            updateTransform();
+        }
+    });
+
+    modalImg.addEventListener('touchend', function(e) {
+        if (e.touches.length === 0) {
+            panning = false;
+        }
+    });
+
+    // Helper function to get distance between two touch points
+    function getDistance(touch1, touch2) {
+        const dx = touch1.clientX - touch2.clientX;
+        const dy = touch1.clientY - touch2.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    // Update transform function
+    function updateTransform() {
+        modalImg.style.transform = `translate(calc(-50% + ${transformX}px), calc(-50% + ${transformY}px)) scale(${scale})`;
     }
 
     // Close modal when clicking the X
@@ -248,9 +400,9 @@ document.addEventListener('DOMContentLoaded', function() {
         closeModal();
     });
 
-    // Close modal when clicking outside the image
+    // Close modal when clicking outside the image (but not when zoomed and panning)
     modal.addEventListener('click', function(event) {
-        if (event.target === modal) {
+        if (event.target === modal && scale === 1) {
             closeModal();
         }
     });
@@ -259,6 +411,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && modal.style.display === 'block') {
             closeModal();
+        }
+    });
+
+    // Reset zoom with R key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'r' && modal.style.display === 'block') {
+            resetZoomAndPan();
         }
     });
 });
