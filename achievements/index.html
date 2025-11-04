@@ -48,8 +48,8 @@
                     <li><a href="../">Home</a></li>
                     <li><a href="../#about">About</a></li>
                     <li><a href="../#achievements" class="active">Achievements</a></li>
-                    <li><a href="../#skills">Skills</a></li>
                     <li><a href="../#ctf-writeups">CTF Writeups</a></li>
+                    <li><a href="../#skills">Skills</a></li>
                     <li><a href="../#experience">Experience</a></li>
                     <li><a href="../#projects">Projects</a></li>
                     <li><a href="../#contact">Contact</a></li>
@@ -76,9 +76,9 @@
         </div>
         <li><a href="../" class="sidenav-close"><i class="material-icons blue-text">home</i>Home</a></li>
         <li><a href="../#about" class="sidenav-close"><i class="material-icons blue-text">account_circle</i>About</a></li>
-        <li><a href="#!" class="sidenav-close active"><i class="material-icons blue-text">emoji_events</i>Achievements</a></li>
-        <li><a href="../#skills" class="sidenav-close"><i class="material-icons blue-text">code</i>Skills</a></li>
+        <li><a href="../#achievements" class="sidenav-close active"><i class="material-icons blue-text">emoji_events</i>Achievements</a></li>
         <li><a href="../#ctf-writeups" class="sidenav-close"><i class="material-icons blue-text">security</i>CTF Writeups</a></li>
+        <li><a href="../#skills" class="sidenav-close"><i class="material-icons blue-text">code</i>Skills</a></li>
         <li><a href="../#experience" class="sidenav-close"><i class="material-icons blue-text">work</i>Experience</a></li>
         <li><a href="../#projects" class="sidenav-close"><i class="material-icons blue-text">view_module</i>Projects</a></li>
         <li><a href="../#contact" class="sidenav-close"><i class="material-icons blue-text">contact_page</i>Contact</a></li>
@@ -384,6 +384,9 @@
                                 <p class="experience-date">October 2017</p>
                                 <div class="divider" style="width: 50px; margin: 1rem 0;"></div>
                                 <p>Recognized by MIT App Inventor as the App of the Month for October 2017. Featured in the official 2017 winners article and awarded a digital badge for innovation and impact.</p>
+                                <div class="project-links" style="margin-top: 1rem;">
+                                    <a href="https://appinventor.mit.edu/explore/app-month-winners-2017#:~:text=Danish%20Hakim" target="_blank" class="btn waves-effect waves-light">View Article</a>
+                                </div>
                                 <div class="chip-container">
                                     <div class="chip">MIT App Inventor</div>
                                     <div class="chip">Mobile Development</div>
@@ -429,18 +432,15 @@
         </div>
 
         <!-- Footer -->
-        <footer class="page-footer" style="background-color: rgb(25, 25, 25);">
-            <div class="container">
+        <footer class="page-footer">
+            <div class="container" style="padding-top: 1rem;">
                 <div class="row">
-                    <div class="col s12 m6">
+                    <div class="col l6 s12">
                         <h5 class="white-text">Danish Hakim</h5>
                         <p class="grey-text text-lighten-4">
                             Computer Science student specializing in Network & Security at IIUM. Experienced in web development and cybersecurity, with a focus on CTF competitions.
                         </p>
-                    </div>
-                    <div class="col s12 m6">
-                        <h5 class="white-text">Connect</h5>
-                        <div class="social-links">
+                        <div class="social-links" style="margin-top: 1rem;">
                             <a href="https://www.twitter.com/Jerit3787" target="_blank" rel="noopener noreferrer" class="social-btn">
                                 <i class="fab fa-twitter"></i>
                             </a>
@@ -455,13 +455,43 @@
                             </a>
                         </div>
                     </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Projects</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/stutastic-site"><i class="fas fa-chart-bar"></i> Stutastic</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/planner"><i class="fas fa-tasks"></i> Student Planner</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://github.com/Jerit3787/bpn"><i class="fab fa-java"></i> BPN Project</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/htmlprojects/mathsquiz/mainui/v1/"><i class="fas fa-calculator"></i> MathsQuiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/ctf"><i class="fas fa-bug"></i> CTF Writeups</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://github.com/Jerit3787"><i class="fab fa-github"></i> GitHub Profile</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/jerit3787"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://jerit3787.github.io/links"><i class="fas fa-link"></i> More Links</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="container center-align">
-                    <span class="grey-text text-lighten-4">© 2025 Danish Hakim. All rights reserved.</span>
+                <div class="container">
+                    <div class="row" style="margin-bottom: 0;">
+                        <div class="col s12 m8">
+                            © 2021-<span id="current-year">2025</span> Danish Hakim | All Rights Reserved
+                        </div>
+                        <div class="col s12 m4 right-align">
+                            <span class="hide-on-small-only">Built with</span> <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <span class="hide-on-small-only">and</span> <a href="https://materializecss.com/" target="_blank"
+                                rel="noopener noreferrer" class="grey-text text-lighten-4">Materialize</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <script>
+                // Auto-update year
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            </script>
         </footer>
     </div>
 
