@@ -1,11 +1,14 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Danish Hakim - Network & Security focused Computer Science student specializing in web development, cybersecurity, and CTF competitions">
     <meta name="keywords" content="web development, cybersecurity, CTF competitions, web exploitation, portfolio, Danish Hakim, Malaysia, IIUM, network security">
     <meta name="author" content="Danish Hakim">
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Danish Hakim | Network Security & Web Development Portfolio">
     <meta property="og:description" content="Computer Science student specializing in Network Security, Web Development, and CTF competitions">
@@ -13,14 +16,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.danplace.tech">
     <meta property="og:site_name" content="Danish Hakim Portfolio">
-    
+
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Jerit3787">
     <meta name="twitter:title" content="Danish Hakim | Network Security & Web Development">
     <meta name="twitter:description" content="Computer Science student specializing in Network Security, Web Development, and CTF competitions">
     <meta name="twitter:image" content="https://www.danplace.tech/assets/img/myself.jpg">
-    
+
     <!-- load requisite -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.2.2/dist/css/materialize.min.css">
@@ -30,6 +33,7 @@
     <script src="assets/js/app.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fc5e9ebac04f41f4989292b139942e6f"}'></script>
     <title>Danish Hakim | Portfolio</title>
 </head>
 
@@ -45,14 +49,16 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#ctf-writeups">CTF Writeups</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a id="theme-toggle" class="btn-floating btn-small waves-effect waves-light">
-                        <i class="material-icons">brightness_4</i>
-                    </a></li>
+                    <li>
+                        <a id="theme-toggle" class="btn-floating btn-small waves-effect waves-light">
+                            <i class="material-icons">brightness_4</i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -70,9 +76,9 @@
         </div>
         <li><a href="#home" class="sidenav-close"><i class="material-icons blue-text">home</i>Home</a></li>
         <li><a href="#about" class="sidenav-close"><i class="material-icons blue-text">account_circle</i>About</a></li>
-        <li><a href="achievements.html" class="sidenav-close"><i class="material-icons blue-text">emoji_events</i>Achievements</a></li>
-        <li><a href="#skills" class="sidenav-close"><i class="material-icons blue-text">code</i>Skills</a></li>
+        <li><a href="#achievements" class="sidenav-close"><i class="material-icons blue-text">emoji_events</i>Achievements</a></li>
         <li><a href="#ctf-writeups" class="sidenav-close"><i class="material-icons blue-text">security</i>CTF Writeups</a></li>
+        <li><a href="#skills" class="sidenav-close"><i class="material-icons blue-text">code</i>Skills</a></li>
         <li><a href="#experience" class="sidenav-close"><i class="material-icons blue-text">work</i>Experience</a></li>
         <li><a href="#projects" class="sidenav-close"><i class="material-icons blue-text">view_module</i>Projects</a></li>
         <li><a href="#contact" class="sidenav-close"><i class="material-icons blue-text">contact_page</i>Contact</a></li>
@@ -143,8 +149,10 @@
                             <h2 class="section-title">About Me</h2>
                             <div class="divider"></div>
                             <p class="flow-text about-text">Hi, I'm <b>Mohammad Danish Hakim bin Mohd Nasir</b>, a Computer Science student specializing in <b>Network and Security</b> at International Islamic University Malaysia (IIUM) in Gombak, Selangor.</p>
-                            <p class="about-text">I've been programming since I was 10 years old, with strongest expertise in JavaScript. Recently, I've been focusing on cybersecurity, participating in CTFs including wargames.my (2023-2024) and UMCS CTF 2025, with particular interest in Web Exploitation.</p>
-                            <p class="about-text">Beyond programming, I have digital editing skills in Adobe Photoshop and Illustrator, experience in live streaming with equipment like ATEM Mini Pro and OBS Studio, and a background in robotics from representing my school in competitions for 3 years.</p>
+                            <p class="about-text">I've been programming since I was 10 years old, with strongest expertise in JavaScript. Recently, I've been focusing on cybersecurity, participating in CTFs including wargames.my (2023-2024) and UMCS CTF 2025, with particular
+                                interest in Web Exploitation.</p>
+                            <p class="about-text">Beyond programming, I have digital editing skills in Adobe Photoshop and Illustrator, experience in live streaming with equipment like ATEM Mini Pro and OBS Studio, and a background in robotics from representing my school in
+                                competitions for 3 years.</p>
                             <div class="personal-info">
                                 <div class="info-item">
                                     <i class="material-icons">school</i>
@@ -174,17 +182,43 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!-- Achievement Cards -->
                     <div class="col s12 m6 l4">
-                        <div class="achievement-card z-depth-1">
-                            <div class="achievement-icon">
-                                <i class="fas fa-trophy"></i>
+                        <div class="card experience-card z-depth-1 black-background">
+                            <div class="card-image">
+                                <div class="image-placeholder">
+                                    <img src="../assets/img/experience9.jfif" alt="Muhaimin, Me and Afiq Danial holding our 5th place cheque at IBOH CTF 2025 - Stage 1" class="clickable-image">
+                                </div>
                             </div>
-                            <div class="achievement-content">
-                                <h5>SunCTF 2025</h5>
-                                <p class="achievement-date">August 2025</p>
-                                <div class="achievement-divider"></div>
-                                <p>Earned 35th in SunCTF 2025, successfully solving challenges in Binary Exploitation and Web Exploitation.</p>
+                            <div class="card-content">
+                                <span class="card-title">NexSec 2025</span>
+                                <p class="experience-date">December 2025</p>
+                                <div class="divider" style="width: 50px; margin: 1rem 0;"></div>
+                                <p>Earned 3th in NexSec 2025 hosted by MCMC with NetSetByte, successfully solving challenges in Digital Forensics.</p>
+                                <div class="project-links" style="margin-top: 1rem;">
+                                    <a href="https://www.linkedin.com/posts/jerit3787_hello-everyone-last-thursday-and-friday-activity-7409140869578055680-s77c?utm_source=share&utm_medium=member_desktop&rcm=ACoAADWOUjoBcEZp2mwu9t2WDtGNWaFKw2xAZIw" target="_blank" class="btn waves-effect waves-light">View LinkedIn Post</a>
+                                </div>
+                                <div class="chip-container">
+                                    <div class="chip">Digital Forensics</div>
+                                    <div class="chip">Capture The Flag</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="card experience-card z-depth-1 black-background">
+                            <div class="card-image">
+                                <div class="image-placeholder">
+                                    <img src="../assets/img/experience10.jfif" alt="Muhaimin, Me and Afiq Danial holding our 5th place cheque at IBOH CTF 2025 - Stage 1" class="clickable-image">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">iGOH 2025</span>
+                                <p class="experience-date">December 2025</p>
+                                <div class="divider" style="width: 50px; margin: 1rem 0;"></div>
+                                <p>Earned 8th in iGOH 2025 hosted by UniKL MIIT, successfully solving challenges in Web Exploitation.</p>
+                                <div class="project-links" style="margin-top: 1rem;">
+                                    <a href="https://www.linkedin.com/posts/jerit3787_hello-everyone-on-4-december-2025-i-attended-activity-7409080349135142914-_5S8?utm_source=share&utm_medium=member_desktop&rcm=ACoAADWOUjoBcEZp2mwu9t2WDtGNWaFKw2xAZIw" target="_blank" class="btn waves-effect waves-light">View LinkedIn Post</a>
+                                </div>
                                 <div class="chip-container">
                                     <div class="chip">Web Exploitation</div>
                                     <div class="chip">Capture The Flag</div>
@@ -192,39 +226,24 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col s12 m6 l4">
-                        <div class="achievement-card z-depth-1">
-                            <div class="achievement-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h5>Wargames.my 2024 & 2023</h5>
-                                <p class="achievement-date">December 2023 & 2024</p>
-                                <div class="achievement-divider"></div>
-                                <p>Successfully solved multiple Web Exploitation challenges, focusing on RCE and SQL injection.</p>
-                                <div class="chip-container">
-                                    <div class="chip">Web Exploitation</div>
-                                    <div class="chip">CTF</div>
-                                    <div class="chip">Web Security</div>
+                        <div class="card experience-card z-depth-1 black-background">
+                            <div class="card-image">
+                                <div class="image-placeholder">
+                                    <img src="../assets/img/experience6.jfif" alt="Muhaimin, Me and Afiq Danial holding our 5th place cheque at IBOH CTF 2025 - Stage 1" class="clickable-image">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <div class="achievement-card z-depth-1">
-                            <div class="achievement-icon">
-                                <i class="fas fa-code-branch"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <h5>Open Source Contribution</h5>
-                                <p class="achievement-date">2024 - 2025</p>
-                                <div class="achievement-divider"></div>
-                                <p>Successfully contributed to open source projects including Materialize CSS framework and AnimeTV, with multiple pull requests merged into their main repositories.</p>
+                            <div class="card-content">
+                                <span class="card-title">IBOH CTF 2025 - Stage 1</span>
+                                <p class="experience-date">November 2025</p>
+                                <div class="divider" style="width: 50px; margin: 1rem 0;"></div>
+                                <p>Earned 5th in IBOH CTF 2025 - Stage 1 hosted by APU FSeC-SS, successfully solving challenges in Web Exploitation.</p>
+                                <div class="project-links" style="margin-top: 1rem;">
+                                    <a href="https://www.linkedin.com/posts/jerit3787_dear-connections-last-saturdays-capture-activity-7393521175076749312-s2Ou?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADWOUjoBcEZp2mwu9t2WDtGNWaFKw2xAZIw" target="_blank" class="btn waves-effect waves-light">View LinkedIn Post</a>
+                                </div>
                                 <div class="chip-container">
-                                    <div class="chip">GitHub</div>
-                                    <div class="chip">CSS Frameworks</div>
-                                    <div class="chip">JavaScript</div>
+                                    <div class="chip">Web Exploitation</div>
+                                    <div class="chip">Capture The Flag</div>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +251,7 @@
                 </div>
                 <div class="row center-align" style="margin-top: 2rem;">
                     <div class="col s12">
-                        <a href="achievements.html" class="btn waves-effect waves-light btn-large">
+                        <a href="/achievements/" class="btn waves-effect waves-light btn-large">
                             <i class="material-icons left">emoji_events</i>View All Achievements
                         </a>
                     </div>
@@ -250,7 +269,34 @@
                 </div>
                 <div class="row">
                     <div class="col s12 m6 l4">
-                        <div class="card experience-card z-depth-1">
+                        <div class="card experience-card z-depth-1 black-background">
+                            <div class="card-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-bug placeholder-icon"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Siber Siaga CTF 2025</span>
+                                <p class="experience-date">October 1, 2025</p>
+                                <div class="divider" style="width: 50px; margin: 1rem 0;"></div>
+                                <p>This writeup consist of all challenge my team (pulupuluultraman) solved during preliminary & finals of the CTF. Consists of Cryptography, Web Exploitation, OSINT, PWN, Forensics, RE and Blockchain.</p>
+                                <div class="project-links" style="margin-top: 1rem;">
+                                    <a href="https://ctf.danplace.tech/tags/siber-siaga-ctf-2025/" target="_blank" class="btn waves-effect waves-light">VIEW WRITEUP</a>
+                                </div>
+                                <div class="chip-container">
+                                    <div class="chip">Web Exploitation</div>
+                                    <div class="chip">Cryptography</div>
+                                    <div class="chip">OSINT</div>
+                                    <div class="chip">PWN</div>
+                                    <div class="chip">Forensics</div>
+                                    <div class="chip">Reverse Engineering</div>
+                                    <div class="chip">Blockchain</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="card experience-card z-depth-1 black-background">
                             <div class="card-image">
                                 <div class="image-placeholder">
                                     <i class="fas fa-bug placeholder-icon"></i>
@@ -272,9 +318,8 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col s12 m6 l4">
-                        <div class="card experience-card z-depth-1">
+                        <div class="card experience-card z-depth-1 black-background">
                             <div class="card-image">
                                 <div class="image-placeholder">
                                     <i class="fas fa-microchip placeholder-icon"></i>
@@ -292,30 +337,6 @@
                                     <div class="chip">Reverse Engineering</div>
                                     <div class="chip">Binary Analysis</div>
                                     <div class="chip">CTF</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col s12 m6 l4">
-                        <div class="card experience-card z-depth-1">
-                            <div class="card-image">
-                                <div class="image-placeholder">
-                                    <i class="fas fa-bug placeholder-icon"></i>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title">Web Exploitation - healthcheck</span>
-                                <p class="experience-date">April 14, 2025</p>
-                                <div class="divider" style="width: 50px; margin: 1rem 0;"></div>
-                                <p>This challenge provided a page that allowed submitting a URL to get its status code. Required bypassing protections to achieve remote code execution.</p>
-                                <div class="project-links" style="margin-top: 1rem;">
-                                    <a href="https://jerit3787.github.io/ctf/posts/umcs-ctf-2025-healthcheck-writeup/" target="_blank" class="btn waves-effect waves-light">VIEW WRITEUP</a>
-                                </div>
-                                <div class="chip-container">
-                                    <div class="chip">Web Exploitation</div>
-                                    <div class="chip">RCE</div>
-                                    <div class="chip">URL Injection</div>
                                 </div>
                             </div>
                         </div>
@@ -465,15 +486,15 @@
                         <p class="flow-text center-align">My professional journey and notable activities</p>
                     </div>
                 </div>
-                
+
                 <!-- Cybersecurity Experience -->
                 <div class="row">
                     <div class="col s12">
                         <h4 class="category-title">Cybersecurity</h4>
                     </div>
-                    
+
                     <div class="col s12 m6">
-                        <div class="card experience-card z-depth-1">
+                        <div class="card experience-card z-depth-1 black-background">
                             <div class="card-image">
                                 <!-- Image placeholder - you can add your image here later -->
                                 <div class="image-placeholder">
@@ -498,9 +519,9 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col s12 m6">
-                        <div class="card experience-card z-depth-1">
+                        <div class="card experience-card z-depth-1 black-background">
                             <div class="card-image">
                                 <!-- Image placeholder - you can add your image here later -->
                                 <div class="image-placeholder">
@@ -526,15 +547,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Event Management Experience -->
                 <div class="row">
                     <div class="col s12">
                         <h4 class="category-title">Event Management</h4>
                     </div>
-                    
+
                     <div class="col s12 m6">
-                        <div class="card experience-card z-depth-1">
+                        <div class="card experience-card z-depth-1 black-background">
                             <div class="card-image">
                                 <!-- Image placeholder - you can add your image here later -->
                                 <div class="image-placeholder">
@@ -559,9 +580,9 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col s12 m6">
-                        <div class="card experience-card z-depth-1">
+                        <div class="card experience-card z-depth-1 black-background">
                             <div class="card-image">
                                 <!-- Image placeholder - you can add your image here later -->
                                 <div class="image-placeholder">
@@ -587,15 +608,15 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Robotics Experience -->
                 <div class="row">
                     <div class="col s12">
                         <h4 class="category-title">Robotics</h4>
                     </div>
-                    
+
                     <div class="col s12 m6">
-                        <div class="card experience-card z-depth-1">
+                        <div class="card experience-card z-depth-1 black-background">
                             <div class="card-image">
                                 <!-- Image placeholder - you can add your image here later -->
                                 <div class="image-placeholder">
@@ -637,7 +658,7 @@
                     <div class="col s12">
                         <h4 class="category-title">Web Development Projects</h4>
                     </div>
-                    
+
                     <div class="col s12 m6 l4">
                         <div class="card project-card z-depth-1">
                             <div class="card-image">
@@ -666,7 +687,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col s12 m6 l4">
                         <div class="card project-card z-depth-1">
                             <div class="card-image">
@@ -683,7 +704,7 @@
                                     <li>Performance optimizations</li>
                                 </ul>
                                 <div class="project-links" style="margin-top: 1rem;">
-                                    <a href="https://jerit3787.github.io/stutastic/v2" target="_blank" class="btn waves-effect waves-light disabled-looking tooltipped" data-position="top" data-tooltip="Not Available Yet :(">Live Demo</a>
+                                    <a href="javascript:void(0)" class="btn waves-effect waves-light disabled-looking tooltipped" data-position="top" data-tooltip="No Longer Available :(">Live Demo</a>
                                 </div>
                                 <div class="chip-container" style="margin-top: 1rem;">
                                     <div class="chip">HTML5</div>
@@ -695,7 +716,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col s12 m6 l4">
                         <div class="card project-card z-depth-1">
                             <div class="card-image">
@@ -712,7 +733,7 @@
                                     <li>Firebase database integration</li>
                                 </ul>
                                 <div class="project-links" style="margin-top: 1rem;">
-                                    <a href="https://jerit3787.github.io/stutastic/v1" target="_blank" class="btn waves-effect waves-light disabled-looking tooltipped" data-position="top" data-tooltip="Not Available Yet :(">Live Demo</a>
+                                    <a href="javascript:void(0)" class="btn waves-effect waves-light disabled-looking tooltipped" data-position="top" data-tooltip="No Longer Available :(">Live Demo</a>
                                 </div>
                                 <div class="chip-container" style="margin-top: 1rem;">
                                     <div class="chip">HTML5</div>
@@ -819,12 +840,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col s12">
                         <h4 class="category-title">Other Applications</h4>
                     </div>
-                    
+
                     <div class="col s12 m6 l4">
                         <div class="card project-card z-depth-1">
                             <div class="card-image">
@@ -853,7 +874,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col s12 m6 l4">
                         <div class="card project-card z-depth-1">
                             <div class="card-image">
@@ -881,7 +902,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col s12 m6 l4">
                         <div class="card project-card z-depth-1">
                             <div class="card-image">
@@ -924,24 +945,23 @@
                 </div>
                 <div class="row">
                     <div class="col s12 m8 offset-m2">
-                        <div class="card contact-card z-depth-1">
+                        <div class="card contact-card z-depth-1 black-background">
                             <div class="card-content center-align">
                                 <i class="material-icons large accent-text">email</i>
                                 <h4>Get In Touch</h4>
                                 <p class="flow-text">Feel free to reach out for collaborations, project inquiries, or just to say hello!</p>
-                                
+
                                 <div class="contact-email">
                                     <a href="mailto:danish.hakim@danplace.tech" class="btn-large waves-effect waves-light email-btn">
-                                        <i class="material-icons left">send</i>
-                                        Send Me an Email
+                                        <i class="material-icons left">send</i> Send Me an Email
                                     </a>
                                 </div>
-                                
+
                                 <div class="contact-item">
                                     <i class="material-icons">location_on</i>
                                     <span>Malaysia</span>
                                 </div>
-                                
+
                                 <div class="social-links">
                                     <a href="https://www.twitter.com/Jerit3787" target="_blank" class="social-btn">
                                         <i class="fab fa-twitter"></i>
@@ -959,7 +979,7 @@
                 </div>
             </div>
             <footer class="page-footer">
-                <div class="container">
+                <div class="container" style="padding-top: 1rem;">
                     <div class="row">
                         <div class="col l6 s12">
                             <h5 class="white-text">Danish Hakim</h5>
@@ -1008,7 +1028,8 @@
                                 © 2021-<span id="current-year">2025</span> Danish Hakim | All Rights Reserved
                             </div>
                             <div class="col s12 m4 right-align">
-                                <span class="hide-on-small-only">Built with</span> <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <span class="hide-on-small-only">and</span> <a href="https://materializecss.com/" target="_blank" rel="noopener noreferrer" class="grey-text text-lighten-4">Materialize</a>
+                                <span class="hide-on-small-only">Built with</span> <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <span class="hide-on-small-only">and</span> <a href="https://materializecss.com/"
+                                    target="_blank" rel="noopener noreferrer" class="grey-text text-lighten-4">Materialize</a>
                             </div>
                         </div>
                     </div>
@@ -1029,4 +1050,6 @@
     </div>
 
 
-</body></html>
+</body>
+
+</html>

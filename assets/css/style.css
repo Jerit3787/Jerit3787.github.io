@@ -42,7 +42,9 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Common Styles */
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -81,7 +83,9 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+
 /* Disabled Resume Button Styles */
+
 .tooltip-container {
     position: relative;
 }
@@ -123,7 +127,9 @@ body {
     opacity: 1;
 }
 
+
 /* Mobile touch support for tooltip */
+
 @media (max-width: 768px) {
     .tooltip-container:active .tooltip-text {
         visibility: visible;
@@ -140,7 +146,9 @@ body {
     }
 }
 
+
 /* Disabled-looking button style */
+
 .disabled-looking {
     background-color: #DFDFDF !important;
     color: #9F9F9F !important;
@@ -153,7 +161,9 @@ body {
     box-shadow: none !important;
 }
 
+
 /* Navigation */
+
 .navbar-fixed {
     position: fixed;
     top: 0;
@@ -200,7 +210,9 @@ nav .sidenav-trigger i {
     margin-left: 10px;
 }
 
+
 /* Sidenav Styles */
+
 .sidenav {
     background-color: var(--primary-color) !important;
     width: 100% !important;
@@ -357,7 +369,9 @@ nav .sidenav-trigger i {
     font-size: 14px;
 }
 
+
 /* Add spacer to push footer to bottom */
+
 .sidenav-spacer {
     flex: 1;
     min-height: 200px;
@@ -417,7 +431,9 @@ nav .sidenav-trigger i {
     }
 }
 
+
 /* WebContainer structure */
+
 .WebContainer {
     width: 100%;
     height: auto;
@@ -431,7 +447,9 @@ nav .sidenav-trigger i {
     scroll-snap-align: start;
 }
 
+
 /* Home/Intro Section */
+
 .intro-container {
     min-height: calc(100vh);
     display: flex;
@@ -502,7 +520,9 @@ nav .sidenav-trigger i {
     color: white;
 }
 
+
 /* About Section */
+
 .profile-container {
     background-color: var(--secondary-color);
     padding: 5rem 0;
@@ -574,7 +594,9 @@ nav .sidenav-trigger i {
     opacity: 1;
 }
 
+
 /* Mobile touch support for tooltip */
+
 @media (max-width: 768px) {
     .download-btn:active .resume-tooltip {
         visibility: visible;
@@ -623,16 +645,41 @@ nav .sidenav-trigger i {
     color: var(--accent-color);
 }
 
+
 /* Skills Section */
+
 .skills-container {
     background-color: var(--primary-color);
     padding: 5rem 0;
 }
 
+
 /* Achievements Section */
+
 .achievements-container {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 5rem 0;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child)::after {
+    display: none;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child)>.col {
+    display: flex;
+    margin-bottom: 1.5rem;
+    float: none !important;
+    margin-left: 0 !important;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child)>.col>.card {
+    width: 100%;
 }
 
 .achievement-card {
@@ -688,7 +735,9 @@ nav .sidenav-trigger i {
     line-height: 1.5;
 }
 
+
 /* Standardized Chip Styling */
+
 .chip {
     background-color: rgba(33, 150, 243, 0.15);
     color: var(--accent-color);
@@ -721,7 +770,9 @@ nav .sidenav-trigger i {
     transform: translateY(-2px);
 }
 
+
 /* Override the experience card chips to match standardized style */
+
 .experience-card .chip {
     background-color: rgba(33, 150, 243, 0.15);
     /* Use standard blue background */
@@ -747,7 +798,9 @@ nav .sidenav-trigger i {
     margin-top: 1rem;
 }
 
+
 /* Remove specific chip styling that will be replaced by standard styling */
+
 .achievement-content .chip,
 .experience-card .chip {
     /* Override with standard styling */
@@ -814,9 +867,11 @@ nav .sidenav-trigger i {
     background-color: var(--accent-color);
 }
 
+
 /* Experience Section */
+
 .experience-container {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 5rem 0;
 }
 
@@ -914,9 +969,11 @@ nav .sidenav-trigger i {
     margin-top: 1.5rem;
 }
 
+
 /* Projects Section */
+
 .project-container {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 5rem 0;
 }
 
@@ -1000,9 +1057,11 @@ nav .sidenav-trigger i {
     margin-top: 1rem;
 }
 
+
 /* CTF Writeups & Web Exploitation Section */
+
 .ctf-container {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 5rem 0;
 }
 
@@ -1053,7 +1112,9 @@ nav .sidenav-trigger i {
     color: white;
 }
 
+
 /* Enhanced achievement styling for Web Exploitation */
+
 .achievement-card.web-exploit {
     border-left: 3px solid var(--accent-color);
 }
@@ -1072,6 +1133,10 @@ nav .sidenav-trigger i {
 .achievement-card .web-exploit-icon i {
     font-size: 1.5rem;
     color: var(--accent-color);
+}
+
+.black-background {
+    background-color: var(--dark-card-color) !important;
 }
 
 .web-exploit-details {
@@ -1109,7 +1174,9 @@ nav .sidenav-trigger i {
     color: var(--accent-color);
 }
 
+
 /* Custom chip styling for CTF categories */
+
 .chip.ctf-category {
     background-color: rgba(33, 150, 243, 0.15);
     color: var(--accent-color);
@@ -1140,9 +1207,11 @@ nav .sidenav-trigger i {
     color: #af52de;
 }
 
+
 /* Contact Section */
+
 .contact-container {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 5rem 0 0;
 }
 
@@ -1207,7 +1276,9 @@ nav .sidenav-trigger i {
     color: white;
 }
 
+
 /* Contact Card */
+
 .contact-card {
     background-color: var(--card-color);
     border-radius: var(--border-radius);
@@ -1262,7 +1333,9 @@ nav .sidenav-trigger i {
     margin-top: 2rem;
 }
 
+
 /* Footer */
+
 .page-footer {
     background-color: var(--primary-color) !important;
     margin-top: 5rem;
@@ -1307,7 +1380,9 @@ nav .sidenav-trigger i {
     color: var(--text-color) !important;
 }
 
+
 /* Animation */
+
 .line-1 {
     position: relative;
     font-size: 180%;
@@ -1345,7 +1420,9 @@ nav .sidenav-trigger i {
     }
 }
 
+
 /* Typewriter Effect */
+
 .typewrite {
     color: var(--text-color);
     text-decoration: none;
@@ -1371,7 +1448,9 @@ nav .sidenav-trigger i {
     }
 }
 
+
 /* Responsive Adjustments */
+
 @media screen and (max-width: 992px) {
     .container {
         width: 95%;
@@ -1425,7 +1504,9 @@ nav .sidenav-trigger i {
     }
 }
 
+
 /* Image Modal Styles */
+
 .image-modal {
     display: none;
     position: fixed;
@@ -1520,7 +1601,9 @@ nav .sidenav-trigger i {
     line-height: 1.4;
 }
 
+
 /* Zoom and Pan Instructions */
+
 .image-modal::before {
     content: "Scroll to zoom • Double-click to zoom • Drag to pan • Press R to reset • Press Esc to close";
     position: absolute;
@@ -1605,7 +1688,9 @@ nav .sidenav-trigger i {
     }
 }
 
+
 /* Responsive adjustments */
+
 @media only screen and (max-width: 700px) {
     .image-modal-content {
         width: 95%;
