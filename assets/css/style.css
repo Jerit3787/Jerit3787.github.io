@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 :root {
     --primary-color: rgb(25, 25, 25);
     --secondary-color: rgb(38, 38, 38);
@@ -134,6 +135,7 @@ body {
         visibility: visible;
         opacity: 1;
     }
+
     .tooltip-container::before {
         content: "Not Available";
         position: absolute;
@@ -407,6 +409,7 @@ nav .sidenav-trigger i {
     .sidenav {
         display: none !important;
     }
+
     body.has-fixed-sidenav {
         padding-left: 0 !important;
     }
@@ -416,10 +419,12 @@ nav .sidenav-trigger i {
     body.has-fixed-sidenav {
         padding-left: 0;
     }
+
     .sidenav.sidenav-fixed {
         transform: translateX(-105%) !important;
         transition: transform 0.3s ease-in-out !important;
     }
+
     .sidenav.sidenav-fixed.show-on-medium-and-down {
         transform: translateX(0) !important;
         transition: transform 0.3s ease-in-out !important;
@@ -654,6 +659,27 @@ nav .sidenav-trigger i {
 .achievements-container {
     background-color: var(--primary-color);
     padding: 5rem 0;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child)::after {
+    display: none;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child)>.col {
+    display: flex;
+    margin-bottom: 1.5rem;
+    float: none !important;
+    margin-left: 0 !important;
+}
+
+.achievements-page .achievements-container>.container>.row:not(:first-child)>.col>.card {
+    width: 100%;
 }
 
 .achievement-card {
@@ -1383,10 +1409,12 @@ nav .sidenav-trigger i {
 }
 
 @keyframes blink-caret {
+
     from,
     to {
         border-color: transparent;
     }
+
     50% {
         border-color: var(--text-color);
     }
@@ -1409,10 +1437,12 @@ nav .sidenav-trigger i {
 }
 
 @keyframes blink-caret {
+
     from,
     to {
         border-color: transparent
     }
+
     50% {
         border-color: var(--text-color);
     }
@@ -1425,16 +1455,20 @@ nav .sidenav-trigger i {
     .container {
         width: 95%;
     }
+
     .hero-content .title {
         font-size: 2rem;
     }
+
     .anim-typewriter {
         animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
     }
+
     @keyframes typewriter {
         from {
             width: 0;
         }
+
         to {
             width: 17em;
         }
@@ -1445,20 +1479,25 @@ nav .sidenav-trigger i {
     .hero-content .title {
         font-size: 1.7rem;
     }
+
     .section-title {
         font-size: 2rem;
     }
+
     .anim-typewriter {
         animation: typewriter 4s steps(20) 1s 1 normal both, blinkTextCursor 500ms steps(20) infinite normal;
     }
+
     @keyframes typewriter {
         from {
             width: 0;
         }
+
         to {
             width: 14em;
         }
     }
+
     .project-card .card-action {
         flex-direction: column;
         gap: 0.5rem;
@@ -1589,6 +1628,7 @@ nav .sidenav-trigger i {
         opacity: 0;
         transform: translateX(-50%) translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
@@ -1609,6 +1649,7 @@ nav .sidenav-trigger i {
         transform: translate(-50%, -50%) scale(0);
         opacity: 0;
     }
+
     to {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
@@ -1620,6 +1661,7 @@ nav .sidenav-trigger i {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
+
     to {
         transform: translate(-50%, -50%) scale(0);
         opacity: 0;
@@ -1630,6 +1672,7 @@ nav .sidenav-trigger i {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -1639,6 +1682,7 @@ nav .sidenav-trigger i {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
@@ -1651,6 +1695,7 @@ nav .sidenav-trigger i {
     .image-modal-content {
         width: 95%;
     }
+
     .image-modal-caption {
         width: 95%;
         bottom: 10px;
@@ -1658,6 +1703,7 @@ nav .sidenav-trigger i {
         font-size: 14px;
         border-radius: 6px;
     }
+
     .image-modal-close {
         top: 10px;
         right: 15px;
@@ -1665,6 +1711,7 @@ nav .sidenav-trigger i {
         width: 40px;
         height: 40px;
     }
+
     /* Mobile instructions */
     .image-modal::before {
         content: "Pinch to zoom • Drag to pan • Double-tap to zoom • Tap × to close";
