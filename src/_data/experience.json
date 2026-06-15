@@ -1,0 +1,64 @@
+{
+  "intro": "My professional journey and notable activities",
+  "categories": [
+    {
+      "name": "Cybersecurity",
+      "items": [
+        {
+          "icon": "fa-shield-alt",
+          "title": "CTF Competitions",
+          "date": "2023 - Present",
+          "description": "Actively participating in Capture The Flag (CTF) competitions to enhance my cybersecurity skills and knowledge.",
+          "bullets": ["Wargames.my CTF (2023-2024)", "UMCS CTF 2025", "SunCTF 2025"],
+          "chips": ["Web Exploitation", "Penetration Testing", "Security"]
+        },
+        {
+          "icon": "fa-laptop-code",
+          "title": "Cybersecurity Workshop",
+          "date": "2025",
+          "description": "Given a talk at Introduction to CTF for Web Exploitation workshop hosted by UPM GDoC at UPM",
+          "bullets": [
+            "Delivered presentation on web exploitation techniques",
+            "Conducted hands-on CTF demonstration sessions",
+            "Shared practical cybersecurity knowledge with participants"
+          ],
+          "chips": ["Web Exploitation", "Workshop", "UPM"]
+        }
+      ]
+    },
+    {
+      "name": "Event Management",
+      "items": [
+        {
+          "icon": "fa-video",
+          "title": "Live Streaming & Technical Support",
+          "date": "2023",
+          "description": "Provided technical expertise for several major events, focusing on live streaming, video production, and technical coordination.",
+          "bullets": ["Sukan Asasi Malaysia (SAM 2023)", "Sports and Martial Arts Carnival (SMAC 2023)", "CFS Festival 2023"],
+          "chips": ["Live Streaming", "ATEM Mini Pro", "OBS Studio"]
+        },
+        {
+          "icon": "fa-users",
+          "title": "Committee Member",
+          "date": "2023",
+          "description": "Served as a committee member for various programme, contributing to event organization and management.",
+          "bullets": ["Media and technical coordination", "Video editing and content creation", "Event planning and execution"],
+          "chips": ["Event Planning", "Media Production", "Adobe Creative Suite"]
+        }
+      ]
+    },
+    {
+      "name": "Robotics",
+      "items": [
+        {
+          "icon": "fa-robot",
+          "title": "Robotics Competition Team Member",
+          "date": "Previous Experience",
+          "description": "Represented my school for 3 years in Robotic Competition MRSM-SeMalaysia, building both technical skills and teamwork abilities.",
+          "bullets": ["Robot design and construction", "Programming and automation", "Competition strategy development"],
+          "chips": ["Robotics", "Programming", "Competition"]
+        }
+      ]
+    }
+  ]
+}

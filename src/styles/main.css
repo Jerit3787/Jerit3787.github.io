@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Standardized button system — keep every button on one of these. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition bg-fg text-surface shadow-glow hover:opacity-90;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition border border-fg/15 text-fg hover:bg-fg/5;
+  }
+
+  .btn-soft {
+    @apply inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition bg-fg/10 text-muted hover:bg-fg hover:text-surface;
+  }
+
+  .btn-disabled {
+    @apply inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg border border-dashed border-fg/25 px-4 py-2 text-sm font-medium text-muted/60 opacity-70;
+  }
+}
+
+@layer base {
+  /* Greyscale theme tokens (RGB triplets so Tailwind's /<alpha> works).
+     Default = dark (black) theme. */
+  :root {
+    --surface: 10 10 11;
+    --card: 23 23 25;
+    --elevated: 39 39 42;
+    --fg: 245 245 246;
+    --muted: 161 161 170;
+  }
+
+  /* Light (white) theme — toggled by adding .light-theme to <body>. */
+  body.light-theme {
+    --surface: 255 255 255;
+    --card: 245 245 246;
+    --elevated: 229 229 233;
+    --fg: 17 17 19;
+    --muted: 82 82 91;
+  }
+
+  html:has(body.light-theme) {
+    --surface: 255 255 255;
+  }
+
+  html,
+  body {
+    background-color: rgb(var(--surface));
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 12% -10%, rgb(var(--fg) / 0.06), transparent 32%),
+      radial-gradient(circle at 88% 4%, rgb(var(--fg) / 0.04), transparent 26%);
+  }
+}
+
+@layer utilities {
+  /* Scroll-reveal animation (driven by IntersectionObserver in main.js).
+     Only hide when JS is available, so no-JS visitors still see everything. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Typewriter caret */
+  .typewrite .wrap {
+    border-right: 0.08em solid rgb(var(--fg));
+    padding-right: 2px;
+  }
+}
+
+/* ===== Image modal (zoom + pan) ===== */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.92);
+  animation: modalFade 0.3s ease;
+}
+
+.image-modal.closing {
+  animation: modalFadeOut 0.3s ease forwards;
+}
+
+.image-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 92vw;
+  max-height: 88vh;
+  transform: translate(-50%, -50%) scale(1);
+  cursor: zoom-in;
+  user-select: none;
+  touch-action: none;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  font-size: 42px;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  z-index: 101;
+  transition: color 0.2s ease;
+}
+
+.image-modal-close:hover {
+  color: #d4d4d4;
+}
+
+.image-modal-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+}
+
+@keyframes modalFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

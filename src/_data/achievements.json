@@ -1,0 +1,325 @@
+{
+  "homeIntro": "Recent accomplishments and recognition in my journey",
+  "pageIntro": "A complete record of my competitions, recognition, and milestones",
+  "sections": [
+    {
+      "heading": "CTF & Cybersecurity Competitions",
+      "intro": "Achievements in Capture The Flag competitions and cybersecurity challenges",
+      "items": [
+        {
+          "featured": true,
+          "image": "/assets/img/experience9.jfif",
+          "alt": "Afiq Danial, Me and Muhaimin holding our 3rd place cheque at NexSec 2025",
+          "title": "NexSec 2025",
+          "rank": {
+            "num": "3",
+            "ord": "rd"
+          },
+          "date": "December 2025",
+          "description": "Earned 3rd in NexSec 2025 hosted by MCMC with NetByteSec, successfully solving challenges in Digital Forensics.",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/jerit3787_hello-everyone-last-thursday-and-friday-activity-7409140869578055680-s77c"
+            }
+          ],
+          "chips": [
+            "Digital Forensics",
+            "Capture The Flag"
+          ]
+        },
+        {
+          "image": "/assets/img/experience11.jfif",
+          "alt": "Me introducing myself at the talk",
+          "title": "CTF Workshop Speaker",
+          "date": "December 2025",
+          "description": "Delivered a technical talk at the “Introduction to PWN” workshop hosted by ICE and SIG at IIUM. The session focused on Binary Exploitation fundamentals, where I guided participants through real-world CTF scenarios, demonstrated on solving challenges, and shared practical techniques for solving pwn-based challenges.",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/jerit3787_hello-everyone-on-5th-december-2025-i-activity-7409050132492619776-48N9"
+            }
+          ],
+          "chips": [
+            "Speaking",
+            "Mentoring",
+            "Workshop"
+          ]
+        },
+        {
+          "featured": true,
+          "image": "/assets/img/experience10.jfif",
+          "alt": "Muhaimin and Afiq Danial holding our hampers and me holding our certificates at IGOH 2025",
+          "title": "iGOH 2025",
+          "rank": {
+            "num": "8",
+            "ord": "th"
+          },
+          "date": "December 2025",
+          "description": "Earned 8th in iGOH 2025 hosted by UniKL MIIT, successfully solving challenges in Web Exploitation.",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/jerit3787_hello-everyone-on-4-december-2025-i-attended-activity-7409080349135142914-_5S8"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "Capture The Flag"
+          ]
+        },
+        {
+          "featured": true,
+          "image": "/assets/img/experience6.jfif",
+          "alt": "Muhaimin, Me and Afiq Danial holding our 5th place cheque at IBOH CTF 2025 - Stage 1",
+          "title": "IBOH CTF 2025 - Stage 1",
+          "rank": {
+            "num": "5",
+            "ord": "th"
+          },
+          "date": "November 2025",
+          "description": "Earned 5th in IBOH CTF 2025 - Stage 1 hosted by APU FSeC-SS, successfully solving challenges in Web Exploitation.",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/jerit3787_dear-connections-last-saturdays-capture-activity-7393521175076749312-s2Ou"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "Capture The Flag"
+          ]
+        },
+        {
+          "image": "/assets/img/experience4.jfif",
+          "alt": "Venue enviroment at APU, no team photo tho :(",
+          "title": "System Override CTF 2025",
+          "rank": {
+            "num": "12",
+            "ord": "th"
+          },
+          "date": "November 2025",
+          "description": "Earned 12th in System Override CTF 2025 hosted by Barqsec and Exploit3rs, successfully solving challenges in Web Exploitation, Binary Exploitation and Reverse Engineering",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/jerit3787_dear-connections-last-saturday-my-teammates-activity-7391110612115755008-mx_8"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "Cryptography",
+            "Capture The Flag"
+          ]
+        },
+        {
+          "image": "/assets/img/experience1.jfif",
+          "alt": "Me, Afiq Danial and Muhaimin at Cyber Siaga CTF 2025",
+          "title": "Siber Siaga CTF 2025",
+          "rank": {
+            "num": "14",
+            "ord": "th"
+          },
+          "date": "September 2025",
+          "description": "Earned 14th in Siber Siaga CTF: CODE COMBAT 2025, successfully solving challenges in Web Exploitation, Cryptography and Blockchain.",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/jerit3787_dear-connections-finally-got-some-time-activity-7379141037518282752-Odgu"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "Cryptography",
+            "Capture The Flag"
+          ]
+        },
+        {
+          "image": "/assets/img/experience2.jfif",
+          "alt": "Afiq Danial, Muhaimin and Me at SunCTF 2025",
+          "title": "SunCTF 2025",
+          "rank": {
+            "num": "35",
+            "ord": "th"
+          },
+          "date": "August 2025",
+          "description": "Earned 35th in SunCTF 2025, successfully solving challenges in Binary Exploitation and Web Exploitation.",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/md-afiq-danial-01b177271_last-saturday-30th-august-i-had-an-amazing-ugcPost-7368194869183352832-jjHr"
+            }
+          ],
+          "chips": [
+            "CTF Competition",
+            "Cybersecurity",
+            "Problem Solving"
+          ]
+        },
+        {
+          "image": "/assets/img/experience3.jfif",
+          "alt": "Muhd Hafiz, Me and Shree giving talk at UPM",
+          "title": "CTF Workshop Speaker",
+          "date": "May 2025",
+          "description": "Delivered a technical talk at the “Introduction to CTF” workshop hosted by UPM GDoC at Universiti Putra Malaysia (UPM). The session focused on Web Exploitation fundamentals, where I guided participants through real-world CTF scenarios, demonstrated common vulnerabilities, and shared practical techniques for solving web-based challenges.",
+          "links": [
+            {
+              "label": "View LinkedIn Post",
+              "href": "https://www.linkedin.com/posts/jerit3787_gdgocupm-cybersecurity-hackthebox-activity-7329916462226124800-vsZf"
+            }
+          ],
+          "chips": [
+            "Speaking",
+            "Mentoring",
+            "Workshop"
+          ]
+        },
+        {
+          "icon": "fa-trophy",
+          "title": "UMDCTF 2025",
+          "rank": {
+            "num": "61",
+            "ord": "st"
+          },
+          "date": "April 2025",
+          "description": "Earned 61st place (22nd in Student Category) in UMDCTF 2025, successfully solving challenges in Binary Exploitation, Miscellaneous category, and the innovative NYT Games category (based on New York Times puzzles).",
+          "chips": [
+            "Web Exploitation",
+            "Capture The Flag",
+            "Binary Exploitation"
+          ]
+        },
+        {
+          "image": "/assets/img/experience8.jfif",
+          "alt": "A selfie me showing proof doing the competition during UMCS CTF 2025",
+          "title": "UMCS CTF 2025",
+          "rank": {
+            "num": "41",
+            "ord": "st"
+          },
+          "date": "April 2025",
+          "description": "Earned 41st place in the preliminary stage of UMCS CTF 2025, successfully solving challenges in Web Exploitation and Reverse Engineering",
+          "links": [
+            {
+              "label": "View Writeups",
+              "href": "https://ctf.danplace.tech/tags/umcs-ctf-2025-preliminary/"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "Capture The Flag",
+            "Reverse Engineering"
+          ]
+        },
+        {
+          "image": "/assets/img/experience7.jfif",
+          "alt": "Merch received for Lucky Draw Writeup at Wargames.my 2023",
+          "title": "Wargames.my 2024 & 2023",
+          "date": "December 2023 & 2024",
+          "description": "Successfully solved multiple Web Exploitation challenges across two consecutive years, focusing on RCE (Remote Code Execution) and SQL injection techniques.",
+          "links": [
+            {
+              "label": "View Writeups (2023)",
+              "href": "https://ctf.danplace.tech/tags/wargames-my-2023/"
+            },
+            {
+              "label": "View Writeups (2024)",
+              "href": "https://ctf.danplace.tech/tags/wargames-my-2024/"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "CTF",
+            "Web Security"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Academic & Professional Recognition",
+      "intro": "Recognition in academics, open source contributions, and professional development",
+      "items": [
+        {
+          "icon": "fa-code-branch",
+          "title": "Open Source Contributor",
+          "date": "2024 - 2025",
+          "description": "Successfully contributed to major open source projects including Materialize CSS framework and AnimeTV, with multiple pull requests merged into their main repositories.",
+          "chips": [
+            "GitHub",
+            "CSS Frameworks",
+            "JavaScript"
+          ]
+        },
+        {
+          "icon": "fa-laptop-code",
+          "title": "10+ Years Programming",
+          "date": "2015 - Present",
+          "description": "Started programming at age 10 and continuously developing skills across multiple languages and frameworks, with particular expertise in JavaScript and web technologies.",
+          "chips": [
+            "JavaScript",
+            "Web Development",
+            "Self-Taught"
+          ]
+        },
+        {
+          "icon": "fa-graduation-cap",
+          "title": "Computer Science Student",
+          "date": "2023 - Present",
+          "description": "Pursuing Bachelor of Computer Science with specialization in Network & Security at International Islamic University Malaysia (IIUM), maintaining strong academic performance.",
+          "chips": [
+            "IIUM",
+            "Network Security",
+            "Computer Science"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Technical Projects & Innovation",
+      "intro": "Notable technical achievements and innovative project developments",
+      "items": [
+        {
+          "icon": "fa-shipping-fast",
+          "title": "Parcel Management System",
+          "date": "2020 - Present",
+          "description": "Built a smart parcel tracking system for schools to replace manual handling. Sends real-time updates, supports courier tracking, and improves student support. Won multiple awards and built with Next.js, Firebase, and Material Design.",
+          "chips": [
+            "Next.js",
+            "Firebase",
+            "UI/UX",
+            "Full Stack"
+          ]
+        },
+        {
+          "image": "/assets/img/experience5.jfif",
+          "alt": "The badge given to me thru email, lost at credly platform",
+          "title": "App of The Month",
+          "date": "October 2017",
+          "description": "Recognized by MIT App Inventor as the App of the Month for October 2017. Featured in the official 2017 winners article and awarded a digital badge for innovation and impact.",
+          "links": [
+            {
+              "label": "View Article",
+              "href": "https://appinventor.mit.edu/explore/app-month-winners-2017#:~:text=Danish%20Hakim"
+            }
+          ],
+          "chips": [
+            "MIT App Inventor",
+            "Mobile Development",
+            "Android App"
+          ]
+        },
+        {
+          "icon": "fa-tools",
+          "title": "Multi-Disciplinary Skills",
+          "date": "Ongoing",
+          "description": "Mastered diverse technical skills including web development, cybersecurity, digital editing (Photoshop, Illustrator), live streaming production, and robotics competition experience.",
+          "chips": [
+            "Multi-Tech",
+            "Adobe Creative",
+            "Robotics"
+          ]
+        }
+      ]
+    }
+  ]
+}

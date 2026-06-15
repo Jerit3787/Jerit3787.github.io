@@ -1,0 +1,30 @@
+{
+  "intro": "Exploring web vulnerabilities and security challenges",
+  "viewAllUrl": "https://jerit3787.github.io/ctf/",
+  "items": [
+    {
+      "icon": "fa-bug",
+      "title": "NexSec 2025",
+      "date": "December 20, 2025",
+      "description": "This writeup consist of all challenge my team (Perisai BETA) solved during preliminary & finals of the CTF. Consists of Digital Forensics challenges and final report.",
+      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/tags/nexsec-2025/" },
+      "chips": ["Digital Forensics", "MCMC"]
+    },
+    {
+      "icon": "fa-bug",
+      "title": "HTB Meetup IIUM - PWN",
+      "date": "December 7, 2025",
+      "description": "This writeup consist of solutions for my challenges that i've presented during the talk",
+      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/posts/htb-meetup-iium/" },
+      "chips": ["PWN", "HTB", "IIUM"]
+    },
+    {
+      "icon": "fa-bug",
+      "title": "MCC 2025 Writeup",
+      "date": "April 14, 2025",
+      "description": "This writeup consist of the group challenge that were given to us which is a boot2root challenge and my experience during the MCC 2025 journey.",
+      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/tags/mcc-2025/" },
+      "chips": ["Boot2Root", "MCC", "Re:HACK"]
+    }
+  ]
+}

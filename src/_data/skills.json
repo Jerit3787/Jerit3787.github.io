@@ -1,0 +1,41 @@
+{
+  "intro": "A set of my technical skills and competencies",
+  "groups": [
+    {
+      "icon": "fa-code",
+      "title": "Frontend Development",
+      "items": [
+        { "name": "HTML/CSS", "level": 95 },
+        { "name": "JavaScript", "level": 90 },
+        { "name": "Responsive Design", "level": 85 }
+      ]
+    },
+    {
+      "icon": "fa-shield-alt",
+      "title": "CTF & Cybersecurity",
+      "items": [
+        { "name": "Web Exploitation", "level": 65 },
+        { "name": "Binary Exploitation (PWN)", "level": 35 },
+        { "name": "Reverse Engineering", "level": 50 }
+      ]
+    },
+    {
+      "icon": "fa-server",
+      "title": "Backend Development",
+      "items": [
+        { "name": "Java", "level": 85 },
+        { "name": "Firebase", "level": 80 },
+        { "name": "Database Design", "level": 75 }
+      ]
+    },
+    {
+      "icon": "fa-tools",
+      "title": "Tools & Technologies",
+      "items": [
+        { "name": "Git/GitHub", "level": 80 },
+        { "name": "Material Design", "level": 90 },
+        { "name": "Responsive Frameworks", "level": 85 }
+      ]
+    }
+  ]
+}

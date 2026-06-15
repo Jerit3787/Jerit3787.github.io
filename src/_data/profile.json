@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "greeting": "Hi, my name is Danish and I am a",
+    "roles": ["Student.", "Programmer.", "Developer.", "Hacker.", "Tech Enthusiast."],
+    "tagline": "Network & Security CS student with expertise in web development and CTF competitions",
+    "ctas": [
+      { "label": "View My Work", "href": "#projects", "primary": true },
+      { "label": "Get In Touch", "href": "#contact", "primary": false }
+    ]
+  },
+  "about": {
+    "image": "/assets/img/myself.jpg",
+    "resume": {
+      "available": false,
+      "label": "Download Resume",
+      "url": "",
+      "unavailableText": "Not Available Yet :("
+    },
+    "paragraphs": [
+      "Hi, I'm <b>Mohammad Danish Hakim bin Mohd Nasir</b>, a Computer Science student specializing in <b>Network and Security</b> at International Islamic University Malaysia (IIUM) in Gombak, Selangor.",
+      "I've been programming since I was 10 years old, with strongest expertise in JavaScript. Recently, I've been focusing on cybersecurity, participating in CTFs including wargames.my (2023-2024) and UMCS CTF 2025, with particular interest in Web Exploitation.",
+      "Beyond programming, I have digital editing skills in Adobe Photoshop and Illustrator, experience in live streaming with equipment like ATEM Mini Pro and OBS Studio, and a background in robotics from representing my school in competitions for 3 years."
+    ],
+    "details": [
+      { "icon": "school", "text": "Bachelor of Computer Science (Network & Security), IIUM" },
+      { "icon": "location_on", "text": "Shah Alam, Selangor, Malaysia" },
+      { "icon": "email", "text": "danish.hakim@danplace.tech" }
+    ]
+  }
+}
