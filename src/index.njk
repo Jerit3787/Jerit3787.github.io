@@ -18,11 +18,7 @@ title: Danish Hakim | Portfolio
       <p class="mt-6 max-w-xl text-lg text-muted">{{ profile.hero.tagline }}</p>
       <div class="mt-8 flex flex-wrap gap-4">
         {% for cta in profile.hero.ctas %}
-          <a href="{{ cta.href }}"
-            class="rounded-xl px-6 py-3 text-sm font-semibold transition
-            {{ 'bg-fg text-surface shadow-glow hover:opacity-90' if cta.primary else 'border border-fg/15 text-muted hover:bg-fg/5' }}">
-            {{ cta.label }}
-          </a>
+          <a href="{{ cta.href }}" class="{{ 'btn-primary' if cta.primary else 'btn-outline' }}">{{ cta.label }}</a>
         {% endfor %}
       </div>
       <div class="mt-10 flex gap-4">
@@ -69,13 +65,11 @@ title: Danish Hakim | Portfolio
       <div class="mt-4">
         {% set r = profile.about.resume %}
         {% if r.available %}
-          <a href="{{ r.url }}"
-            class="flex items-center justify-center gap-2 rounded-xl bg-fg px-5 py-3 text-sm font-semibold text-surface shadow-glow transition hover:opacity-90">
+          <a href="{{ r.url }}" class="btn-primary w-full">
             <i class="material-icons text-[18px]">file_download</i>{{ r.label }}
           </a>
         {% else %}
-          <span title="{{ r.unavailableText }}"
-            class="flex cursor-not-allowed items-center justify-center gap-2 rounded-xl bg-fg/5 px-5 py-3 text-sm font-semibold text-muted">
+          <span title="{{ r.unavailableText }}" class="btn-disabled w-full justify-center px-5 py-3">
             <i class="material-icons text-[18px]">file_download</i>{{ r.label }}
           </span>
         {% endif %}
@@ -111,8 +105,7 @@ title: Danish Hakim | Portfolio
       {% endfor %}
     </div>
     <div class="mt-10 text-center reveal">
-      <a href="/achievements/"
-        class="inline-flex items-center gap-2 rounded-xl bg-fg px-6 py-3 text-sm font-semibold text-surface shadow-glow transition hover:opacity-90">
+      <a href="/achievements/" class="btn-primary">
         <i class="material-icons text-[18px]">emoji_events</i>View All Achievements
       </a>
     </div>
@@ -127,8 +120,7 @@ title: Danish Hakim | Portfolio
       {% for item in ctf.items %}{{ infoCard(item) }}{% endfor %}
     </div>
     <div class="mt-10 text-center reveal">
-      <a href="{{ ctf.viewAllUrl }}"
-        class="inline-flex items-center gap-2 rounded-xl border border-fg/15 px-6 py-3 text-sm font-semibold text-muted transition hover:bg-fg/5">
+      <a href="{{ ctf.viewAllUrl }}" class="btn-primary">
         <i class="material-icons text-[18px]">list</i>View All CTF Writeups
       </a>
     </div>
@@ -211,8 +203,7 @@ title: Danish Hakim | Portfolio
       </span>
       <h3 class="mt-5 text-2xl font-semibold text-fg">Get In Touch</h3>
       <p class="mt-3 text-muted">Feel free to reach out for collaborations, project inquiries, or just to say hello!</p>
-      <a href="mailto:{{ site.email }}"
-        class="mt-6 inline-flex items-center gap-2 rounded-xl bg-fg px-7 py-3.5 text-sm font-semibold text-surface shadow-glow transition hover:opacity-90">
+      <a href="mailto:{{ site.email }}" class="btn-primary mt-6 px-7 py-3.5">
         <i class="material-icons text-[18px]">send</i>Send Me an Email
       </a>
       <div class="mt-6 flex items-center justify-center gap-2 text-sm text-muted">

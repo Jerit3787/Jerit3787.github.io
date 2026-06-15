@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* Standardized button system — keep every button on one of these. */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition bg-fg text-surface shadow-glow hover:opacity-90;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold transition border border-fg/15 text-fg hover:bg-fg/5;
+  }
+
+  .btn-soft {
+    @apply inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium transition bg-fg/10 text-muted hover:bg-fg hover:text-surface;
+  }
+
+  .btn-disabled {
+    @apply inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium bg-fg/5 text-muted;
+  }
+}
+
 @layer base {
   /* Greyscale theme tokens (RGB triplets so Tailwind's /<alpha> works).
      Default = dark (black) theme. */

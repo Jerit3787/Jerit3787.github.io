@@ -21,21 +21,35 @@
 {# ----- Button (link) ----- #}
 {% macro linkBtn(link) %}
   {% if link.disabled %}
-    <span title="{{ link.unavailableText }}"
-      class="inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg bg-fg/5 px-4 py-2 text-sm font-medium text-muted">
-      {{ link.label }}
-    </span>
+    <span title="{{ link.unavailableText }}" class="btn-disabled">{{ link.label }}</span>
   {% else %}
-    <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer"
-      class="inline-flex items-center gap-1.5 rounded-lg bg-fg/10 px-4 py-2 text-sm font-medium text-muted transition hover:bg-fg hover:text-surface">
-      {{ link.label }}
-    </a>
+    <a href="{{ link.href }}" target="_blank" rel="noopener noreferrer" class="btn-soft">{{ link.label }}</a>
   {% endif %}
+{% endmacro %}
+
+{# ----- Placement award stamp (monochrome, theme-aware) ----- #}
+{% macro rankStamp(rank) %}
+  <div class="pointer-events-none absolute right-3 top-3 z-10 text-fg drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+    <svg viewBox="0 0 84 108" class="h-[4.75rem] w-auto" aria-hidden="true">
+      <!-- ribbon tails -->
+      <path d="M30 64 L21 104 L34 94 L42 106 L50 94 L63 104 L54 64 Z" fill="currentColor"/>
+      <!-- scalloped seal edge -->
+      <circle cx="42" cy="40" r="34" fill="currentColor" stroke="currentColor" stroke-width="4"
+        stroke-dasharray="2.2 3.4" stroke-linecap="round"/>
+      <circle cx="42" cy="40" r="31" fill="currentColor"/>
+      <circle cx="42" cy="40" r="26" fill="none" stroke="rgb(var(--surface))" stroke-width="1.4"/>
+      <text x="42" y="45" text-anchor="middle" fill="rgb(var(--surface))" font-family="Poppins, sans-serif"
+        font-weight="800" font-size="24">{{ rank.num }}<tspan font-size="12" dy="-9" font-weight="700">{{ rank.ord }}</tspan></text>
+      <text x="42" y="57" text-anchor="middle" fill="rgb(var(--surface))" font-family="Poppins, sans-serif"
+        font-size="7.5" font-weight="700" letter-spacing="1.6">PLACE</text>
+    </svg>
+  </div>
 {% endmacro %}
 
 {# ----- Card media: image or icon placeholder ----- #}
 {% macro media(item) %}
   <div class="relative h-44 overflow-hidden">
+    {% if item.rank %}{{ rankStamp(item.rank) }}{% endif %}
     {% if item.image %}
       <img src="{{ item.image }}" alt="{{ item.alt or item.title }}"
         class="zoomable h-full w-full cursor-zoom-in object-cover transition duration-500 group-hover:scale-105">
