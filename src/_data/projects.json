@@ -1,0 +1,113 @@
+{
+  "intro": "A collection of my recent work and projects",
+  "categories": [
+    {
+      "name": "Web Development Projects",
+      "items": [
+        {
+          "image": "/assets/img/project6.png",
+          "title": "Project Stutastic v3",
+          "subtitle": "Latest Version",
+          "description": "Student statistics management system with analytical features.",
+          "bullets": ["Student data management", "Statistical analysis", "Real-time data updates"],
+          "links": [{ "label": "Live Demo", "href": "https://jerit3787.github.io/stutastic-site" }],
+          "chips": ["HTML5", "CSS3", "JavaScript", "Firebase", "Materialize"]
+        },
+        {
+          "image": "/assets/img/project5.png",
+          "title": "Project Stutastic v2",
+          "subtitle": "Intermediate Version",
+          "description": "Improved version with enhanced UI and features.",
+          "bullets": ["Enhanced UI with Material Design", "Better data organization", "Performance optimizations"],
+          "links": [{ "label": "Live Demo", "disabled": true, "unavailableText": "No Longer Available :(" }],
+          "chips": ["HTML5", "CSS3", "JavaScript", "Firebase", "Materialize"]
+        },
+        {
+          "image": "/assets/img/project1.png",
+          "title": "Project Stutastic v1",
+          "subtitle": "Initial Version",
+          "description": "Initial version of the student statistics system.",
+          "bullets": ["Basic student data management", "Simple statistics display", "Firebase database integration"],
+          "links": [{ "label": "Live Demo", "disabled": true, "unavailableText": "No Longer Available :(" }],
+          "chips": ["HTML5", "CSS3", "JavaScript", "Firebase", "MDL"]
+        }
+      ]
+    },
+    {
+      "name": "Final Projects",
+      "items": [
+        {
+          "image": "/assets/img/project7.png",
+          "title": "BlackBox AI prototype",
+          "subtitle": "AI Chat Interface",
+          "description": "Enhanced BlackBox AI interface with improved user experience and modern design",
+          "bullets": ["Responsive chat management system", "Personalized AI responses", "Intuitive Material Design interface"],
+          "links": [
+            { "label": "Live Demo", "href": "https://jerit3787.github.io/BlackBoxAI-Project" },
+            { "label": "GitHub", "href": "https://github.com/Jerit3787/BlackBoxAI-Project" }
+          ],
+          "chips": ["HTML5", "CSS3", "JavaScript", "Materialize", "HCI"]
+        },
+        {
+          "image": "/assets/img/project8.png",
+          "title": "PropertyPro prototype",
+          "subtitle": "Real Estate Platform",
+          "description": "Modern real estate platform for property discovery and management",
+          "bullets": ["Advanced property search and filtering", "Interactive property listings", "Responsive design for all devices"],
+          "links": [
+            { "label": "Live Demo", "href": "https://jerit3787.github.io/propertypro" },
+            { "label": "GitHub", "href": "https://github.com/Jerit3787/propertypro" }
+          ],
+          "chips": ["HTML5", "CSS3", "JavaScript", "Materialize", "ISE"]
+        },
+        {
+          "image": "/assets/img/project9.png",
+          "title": "Kasutto prototype",
+          "subtitle": "E-commerce Platform",
+          "description": "Modern e-commerce platform specializing in footwear retail",
+          "bullets": ["Product catalog with filtering", "Shopping cart functionality", "Responsive modern interface"],
+          "links": [
+            { "label": "Live Demo", "href": "https://jerit3787.github.io/kasutto" },
+            { "label": "GitHub", "href": "https://github.com/Jerit3787/kasutto" }
+          ],
+          "chips": ["HTML5", "CSS3", "JavaScript", "Materialize", "Web Development"]
+        }
+      ]
+    },
+    {
+      "name": "Other Applications",
+      "items": [
+        {
+          "image": "/assets/img/project2.png",
+          "title": "Student Planner",
+          "subtitle": "Web Application",
+          "description": "Task management and planning tool for students.",
+          "bullets": ["Task scheduling and reminders", "Course organization", "Calendar integration"],
+          "links": [{ "label": "Live Demo", "href": "https://jerit3787.github.io/planner" }],
+          "chips": ["HTML5", "CSS3", "JavaScript", "Firebase", "Materialize"]
+        },
+        {
+          "image": "/assets/img/project3.png",
+          "title": "BPN Project",
+          "subtitle": "Java Application",
+          "description": "Java-based application with Material Design interface.",
+          "bullets": ["Java Swing application", "Custom UI implementation", "Data processing modules"],
+          "links": [{ "label": "GitHub", "href": "https://github.com/Jerit3787/bpn" }],
+          "chips": ["Java", "Swing", "JFrame", "Material Design"]
+        },
+        {
+          "image": "/assets/img/project4.png",
+          "title": "MathsQuiz",
+          "subtitle": "Web Application",
+          "description": "Interactive mathematics quiz web application.",
+          "bullets": ["Randomized math problems", "Difficulty levels", "Score tracking"],
+          "links": [
+            { "label": "Live Demo", "href": "https://jerit3787.github.io/htmlprojects/mathsquiz/mainui/v1/" },
+            { "label": "GitHub", "href": "https://www.github.com/Jerit3787/htmlprojects" }
+          ],
+          "chips": ["HTML5", "CSS3", "JavaScript", "ES6"]
+        }
+      ]
+    }
+  ]
+}

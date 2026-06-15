@@ -1,0 +1,25 @@
+{
+  "name": "jerit3787.github.io",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Config-driven static portfolio powered by Eleventy and Tailwind CSS",
+  "scripts": {
+    "build:css": "postcss src/styles/main.css -o _site/assets/css/main.css",
+    "build:html": "eleventy",
+    "build": "npm run build:html && npm run build:css",
+    "watch:css": "postcss src/styles/main.css -o _site/assets/css/main.css --watch",
+    "serve": "eleventy --serve",
+    "dev": "npm run build:html && npm run build:css && concurrently -k \"npm:watch:css\" \"npm:serve\"",
+    "clean": "rimraf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.13"
+  }
+}

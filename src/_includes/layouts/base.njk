@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<!-- Mark that JS is active so scroll-reveal only hides content when it can be revealed. -->
+<script>document.documentElement.classList.add("js");</script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ site.meta.description }}">
+  <meta name="keywords" content="{{ site.meta.keywords }}">
+  <meta name="author" content="{{ site.meta.author }}">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="{{ site.meta.ogTitle }}">
+  <meta property="og:description" content="{{ site.meta.ogDescription }}">
+  <meta property="og:image" content="{{ site.meta.ogImage }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:site_name" content="Danish Hakim Portfolio">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ site.meta.twitterHandle }}">
+  <meta name="twitter:title" content="{{ site.meta.ogTitle }}">
+  <meta name="twitter:description" content="{{ site.meta.ogDescription }}">
+  <meta name="twitter:image" content="{{ site.meta.ogImage }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <script defer src="/assets/js/main.js"></script>
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fc5e9ebac04f41f4989292b139942e6f"}'></script>
+  <title>{{ title or site.title }}</title>
+</head>
+
+<body class="bg-ink-900 text-slate-200 font-sans antialiased selection:bg-accent/30">
+  {% set rootRelative = rootRelative or false %}
+
+  <!-- Top navigation -->
+  <header id="site-header"
+    class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-ink-900/70 backdrop-blur-md transition-shadow">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+      <a href="{{ '/' if rootRelative else '#home' }}" class="flex items-center gap-3">
+        <img src="{{ site.logo }}" alt="{{ site.name }}"
+          class="h-10 w-10 rounded-full border border-white/30 p-0.5">
+      </a>
+
+      <ul class="hidden items-center gap-1 lg:flex">
+        {% for link in site.nav %}
+          {% set href = link.href %}
+          {% if rootRelative %}{% set href = ('/' if link.href == '#home' else '/' + link.href) %}{% endif %}
+          <li>
+            <a href="{{ href }}"
+              class="nav-link rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white">
+              {{ link.label }}
+            </a>
+          </li>
+        {% endfor %}
+        <li>
+          <button id="theme-toggle" type="button" aria-label="Toggle theme"
+            class="ml-2 grid h-9 w-9 place-items-center rounded-full bg-white/5 text-accent transition hover:bg-white/10">
+            <i class="material-icons text-[20px]">brightness_4</i>
+          </button>
+        </li>
+      </ul>
+
+      <button id="nav-toggle" type="button" aria-label="Open menu"
+        class="grid h-10 w-10 place-items-center rounded-lg bg-white/5 text-white lg:hidden">
+        <i class="material-icons">menu</i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="nav-overlay" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm lg:hidden"></div>
+  <aside id="mobile-nav"
+    class="fixed right-0 top-0 z-[60] flex h-full w-72 translate-x-full flex-col bg-ink-800 shadow-2xl transition-transform duration-300 lg:hidden">
+    <div class="relative bg-accent-gradient px-5 pb-6 pt-8">
+      <button id="nav-close" type="button" aria-label="Close menu"
+        class="absolute right-4 top-4 text-white/90 hover:text-white">
+        <i class="material-icons">close</i>
+      </button>
+      <img src="{{ site.profileImage }}" alt="{{ site.name }}"
+        class="h-16 w-16 rounded-full border-2 border-white/70 object-cover">
+      <p class="mt-3 font-semibold text-white">{{ site.name }}</p>
+      <p class="text-sm text-white/80">{{ site.email }}</p>
+    </div>
+    <ul class="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
+      {% for link in site.nav %}
+        {% set href = link.href %}
+        {% if rootRelative %}{% set href = ('/' if link.href == '#home' else '/' + link.href) %}{% endif %}
+        <li>
+          <a href="{{ href }}"
+            class="mobile-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-slate-300 transition hover:bg-white/5 hover:text-white">
+            <i class="material-icons text-accent">{{ link.icon }}</i>{{ link.label }}
+          </a>
+        </li>
+      {% endfor %}
+      <li class="my-2 border-t border-white/10"></li>
+      <li>
+        <button id="mobile-theme-toggle" type="button"
+          class="mobile-link flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-slate-300 transition hover:bg-white/5 hover:text-white">
+          <i class="material-icons text-accent">settings</i>Toggle Theme
+        </button>
+      </li>
+    </ul>
+    <div class="flex gap-3 border-t border-white/10 px-5 py-4">
+      {% for s in site.social %}
+        <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.label }}"
+          class="grid h-9 w-9 place-items-center rounded-full bg-white/5 text-slate-300 transition hover:bg-accent hover:text-white">
+          <i class="fab {{ s.icon }}"></i>
+        </a>
+      {% endfor %}
+    </div>
+  </aside>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-ink-800/60">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-[2fr_1fr_1fr]">
+      <div>
+        <h5 class="text-lg font-semibold text-white">{{ site.name }}</h5>
+        <p class="mt-3 max-w-md text-sm leading-relaxed text-slate-400">{{ site.footer.blurb }}</p>
+        <div class="mt-4 flex gap-3">
+          {% for s in site.social %}
+            <a href="{{ s.href }}" target="_blank" rel="noopener noreferrer" aria-label="{{ s.label }}"
+              class="grid h-9 w-9 place-items-center rounded-full bg-white/5 text-slate-300 transition hover:bg-accent hover:text-white">
+              <i class="fab {{ s.icon }}"></i>
+            </a>
+          {% endfor %}
+          <a href="mailto:{{ site.email }}" aria-label="Email"
+            class="grid h-9 w-9 place-items-center rounded-full bg-white/5 text-slate-300 transition hover:bg-accent hover:text-white">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      {% for col in site.footer.columns %}
+        <div>
+          <h5 class="text-sm font-semibold uppercase tracking-wide text-white">{{ col.heading }}</h5>
+          <ul class="mt-3 space-y-2 text-sm">
+            {% for l in col.links %}
+              <li>
+                <a href="{{ l.href }}" class="inline-flex items-center gap-2 text-slate-400 transition hover:text-accent">
+                  <i class="{{ l.icon }} w-4 text-center"></i>{{ l.label }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="border-t border-white/5">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <span>&copy; {{ site.footer.copyrightStart }}-{{ currentYear }} {{ site.name }} | All Rights Reserved</span>
+        <span class="inline-flex items-center gap-1.5">
+          Built with <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> and
+          <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-accent">Eleventy</a>
+          &amp; <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-accent">Tailwind</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image modal -->
+  <div id="imageModal" class="image-modal">
+    <span class="image-modal-close">&times;</span>
+    <img class="image-modal-content" id="modalImage" alt="Enlarged view">
+    <div class="image-modal-caption" id="imageCaption"></div>
+  </div>
+</body>
+
+</html>

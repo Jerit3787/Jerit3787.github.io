@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-image:
+      radial-gradient(circle at 12% -10%, rgba(33, 150, 243, 0.14), transparent 32%),
+      radial-gradient(circle at 88% 4%, rgba(15, 145, 239, 0.1), transparent 26%);
+  }
+
+  /* Light theme overrides */
+  body.light-theme {
+    @apply bg-slate-100 text-slate-800;
+    background-image:
+      radial-gradient(circle at 12% -10%, rgba(33, 150, 243, 0.12), transparent 30%),
+      radial-gradient(circle at 88% 4%, rgba(15, 145, 239, 0.08), transparent 22%);
+  }
+}
+
+@layer utilities {
+  /* Scroll-reveal animation (driven by IntersectionObserver in main.js).
+     Only hide when JS is available, so no-JS visitors still see everything. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Typewriter caret */
+  .typewrite .wrap {
+    border-right: 0.08em solid theme("colors.accent.DEFAULT");
+    padding-right: 2px;
+  }
+}
+
+/* ===== Image modal (zoom + pan) ===== */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.92);
+  animation: modalFade 0.3s ease;
+}
+
+.image-modal.closing {
+  animation: modalFadeOut 0.3s ease forwards;
+}
+
+.image-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 92vw;
+  max-height: 88vh;
+  transform: translate(-50%, -50%) scale(1);
+  cursor: zoom-in;
+  user-select: none;
+  touch-action: none;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  font-size: 42px;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  z-index: 101;
+  transition: color 0.2s ease;
+}
+
+.image-modal-close:hover {
+  color: theme("colors.accent.soft");
+}
+
+.image-modal-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+}
+
+@keyframes modalFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

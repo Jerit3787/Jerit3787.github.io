@@ -1,0 +1,56 @@
+{
+  "name": "Danish Hakim",
+  "title": "Danish Hakim | Portfolio",
+  "url": "https://www.danplace.tech",
+  "email": "danish.hakim@danplace.tech",
+  "logo": "/assets/img/icon.png",
+  "profileImage": "/assets/img/myself_profile.jpg",
+  "meta": {
+    "description": "Danish Hakim - Network & Security focused Computer Science student specializing in web development, cybersecurity, and CTF competitions",
+    "keywords": "web development, cybersecurity, CTF competitions, web exploitation, portfolio, Danish Hakim, Malaysia, IIUM, network security",
+    "author": "Danish Hakim",
+    "ogTitle": "Danish Hakim | Network Security & Web Development Portfolio",
+    "ogDescription": "Computer Science student specializing in Network Security, Web Development, and CTF competitions",
+    "ogImage": "https://www.danplace.tech/assets/img/myself.jpg",
+    "twitterHandle": "@Jerit3787"
+  },
+  "nav": [
+    { "label": "Home", "href": "#home", "icon": "home" },
+    { "label": "About", "href": "#about", "icon": "account_circle" },
+    { "label": "Achievements", "href": "#achievements", "icon": "emoji_events" },
+    { "label": "CTF Writeups", "href": "#ctf-writeups", "icon": "security" },
+    { "label": "Skills", "href": "#skills", "icon": "code" },
+    { "label": "Experience", "href": "#experience", "icon": "work" },
+    { "label": "Projects", "href": "#projects", "icon": "view_module" },
+    { "label": "Contact", "href": "#contact", "icon": "contact_page" }
+  ],
+  "social": [
+    { "label": "Twitter", "icon": "fa-twitter", "href": "https://www.twitter.com/Jerit3787" },
+    { "label": "GitHub", "icon": "fa-github", "href": "https://www.github.com/Jerit3787" },
+    { "label": "LinkedIn", "icon": "fa-linkedin-in", "href": "https://www.linkedin.com/in/jerit3787" }
+  ],
+  "footer": {
+    "blurb": "Computer Science student specializing in Network & Security at IIUM. Experienced in web development and cybersecurity, with a focus on CTF competitions.",
+    "columns": [
+      {
+        "heading": "Projects",
+        "links": [
+          { "label": "Stutastic", "icon": "fas fa-chart-bar", "href": "https://jerit3787.github.io/stutastic-site" },
+          { "label": "Student Planner", "icon": "fas fa-tasks", "href": "https://jerit3787.github.io/planner" },
+          { "label": "BPN Project", "icon": "fab fa-java", "href": "https://github.com/Jerit3787/bpn" },
+          { "label": "MathsQuiz", "icon": "fas fa-calculator", "href": "https://jerit3787.github.io/htmlprojects/mathsquiz/mainui/v1/" }
+        ]
+      },
+      {
+        "heading": "Links",
+        "links": [
+          { "label": "CTF Writeups", "icon": "fas fa-bug", "href": "https://jerit3787.github.io/ctf" },
+          { "label": "GitHub Profile", "icon": "fab fa-github", "href": "https://github.com/Jerit3787" },
+          { "label": "LinkedIn", "icon": "fab fa-linkedin", "href": "https://www.linkedin.com/in/jerit3787" },
+          { "label": "More Links", "icon": "fas fa-link", "href": "https://jerit3787.github.io/links" }
+        ]
+      }
+    ],
+    "copyrightStart": "2021"
+  }
+}
