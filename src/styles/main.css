@@ -3,18 +3,38 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    background-image:
-      radial-gradient(circle at 12% -10%, rgba(33, 150, 243, 0.14), transparent 32%),
-      radial-gradient(circle at 88% 4%, rgba(15, 145, 239, 0.1), transparent 26%);
+  /* Greyscale theme tokens (RGB triplets so Tailwind's /<alpha> works).
+     Default = dark (black) theme. */
+  :root {
+    --surface: 10 10 11;
+    --card: 23 23 25;
+    --elevated: 39 39 42;
+    --fg: 245 245 246;
+    --muted: 161 161 170;
   }
 
-  /* Light theme overrides */
+  /* Light (white) theme — toggled by adding .light-theme to <body>. */
   body.light-theme {
-    @apply bg-slate-100 text-slate-800;
+    --surface: 255 255 255;
+    --card: 245 245 246;
+    --elevated: 229 229 233;
+    --fg: 17 17 19;
+    --muted: 82 82 91;
+  }
+
+  html:has(body.light-theme) {
+    --surface: 255 255 255;
+  }
+
+  html,
+  body {
+    background-color: rgb(var(--surface));
+  }
+
+  body {
     background-image:
-      radial-gradient(circle at 12% -10%, rgba(33, 150, 243, 0.12), transparent 30%),
-      radial-gradient(circle at 88% 4%, rgba(15, 145, 239, 0.08), transparent 22%);
+      radial-gradient(circle at 12% -10%, rgb(var(--fg) / 0.06), transparent 32%),
+      radial-gradient(circle at 88% 4%, rgb(var(--fg) / 0.04), transparent 26%);
   }
 }
 
@@ -42,7 +62,7 @@
 
   /* Typewriter caret */
   .typewrite .wrap {
-    border-right: 0.08em solid theme("colors.accent.DEFAULT");
+    border-right: 0.08em solid rgb(var(--fg));
     padding-right: 2px;
   }
 }
@@ -86,7 +106,7 @@
 }
 
 .image-modal-close:hover {
-  color: theme("colors.accent.soft");
+  color: #d4d4d4;
 }
 
 .image-modal-caption {

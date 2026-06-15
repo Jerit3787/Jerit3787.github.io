@@ -7,25 +7,25 @@ permalink: /achievements/index.html
 {% from "macros/ui.njk" import heading, infoCard %}
 
 <section class="relative overflow-hidden pt-32 pb-16 scroll-mt-16">
-  <div class="pointer-events-none absolute -left-32 -top-10 h-96 w-96 rounded-full bg-accent/20 blur-3xl"></div>
+  <div class="pointer-events-none absolute -left-32 -top-10 h-96 w-96 rounded-full bg-fg/10 blur-3xl"></div>
   <div class="mx-auto max-w-6xl px-5 text-center">
-    <a href="/#achievements" class="inline-flex items-center gap-1.5 text-sm text-accent transition hover:text-accent-soft">
+    <a href="/#achievements" class="inline-flex items-center gap-1.5 text-sm text-fg transition hover:text-fg">
       <i class="material-icons text-[18px]">arrow_back</i>Back to Home
     </a>
-    <h1 class="mt-4 text-4xl font-bold text-white sm:text-5xl">Achievements</h1>
-    <span class="mx-auto mt-4 block h-1 w-16 rounded-full bg-accent-gradient"></span>
-    <p class="mx-auto mt-4 max-w-2xl text-slate-400">{{ achievements.pageIntro }}</p>
+    <h1 class="mt-4 text-4xl font-bold text-fg sm:text-5xl">Achievements</h1>
+    <span class="mx-auto mt-4 block h-1 w-16 rounded-full bg-fg"></span>
+    <p class="mx-auto mt-4 max-w-2xl text-muted">{{ achievements.pageIntro }}</p>
   </div>
 </section>
 
 {% for section in achievements.sections %}
-  <section class="py-12 {{ 'bg-ink-800/40' if loop.index is even }}">
+  <section class="py-12 {{ 'bg-card/40' if loop.index is even }}">
     <div class="mx-auto max-w-6xl px-5">
       <div class="reveal">
-        <h2 class="flex items-center gap-3 text-2xl font-semibold text-white">
-          <span class="h-6 w-1 rounded-full bg-accent-gradient"></span>{{ section.heading }}
+        <h2 class="flex items-center gap-3 text-2xl font-semibold text-fg">
+          <span class="h-6 w-1 rounded-full bg-fg"></span>{{ section.heading }}
         </h2>
-        <p class="mt-2 text-slate-400">{{ section.intro }}</p>
+        <p class="mt-2 text-muted">{{ section.intro }}</p>
       </div>
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {% for item in section.items %}{{ infoCard(item) }}{% endfor %}
@@ -36,9 +36,9 @@ permalink: /achievements/index.html
 
 <section class="py-20">
   <div class="mx-auto max-w-3xl px-5 text-center reveal">
-    <p class="text-lg text-slate-400">More achievements are being updated regularly as I continue my journey in technology and cybersecurity.</p>
+    <p class="text-lg text-muted">More achievements are being updated regularly as I continue my journey in technology and cybersecurity.</p>
     <a href="/#contact"
-      class="mt-6 inline-flex items-center gap-2 rounded-xl bg-accent-gradient px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-90">
+      class="mt-6 inline-flex items-center gap-2 rounded-xl bg-fg px-7 py-3.5 text-sm font-semibold text-surface shadow-glow transition hover:opacity-90">
       <i class="material-icons text-[18px]">email</i>Get In Touch
     </a>
   </div>

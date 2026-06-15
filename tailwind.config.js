@@ -1,33 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{njk,html,js}", "./_site/**/*.html"],
-  darkMode: ["class", ".light-theme"],
-  safelist: ["animated", "light-theme", "nav-open"],
+  darkMode: "class",
+  safelist: ["animated", "light-theme", "nav-open", "is-visible", "js"],
   theme: {
     extend: {
+      // Greyscale palette driven by CSS variables (see src/styles/main.css).
+      // The variables flip between the dark and light themes, so every
+      // token below automatically switches with the theme toggle.
       colors: {
-        accent: {
-          DEFAULT: "#2196f3",
-          soft: "#64b5f6",
-          deep: "#1565c0",
-        },
-        ink: {
-          900: "#0c0e12",
-          800: "#111419",
-          700: "#171b22",
-          600: "#1f242d",
-        },
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        card: "rgb(var(--card) / <alpha-value>)",
+        elevated: "rgb(var(--elevated) / <alpha-value>)",
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        accent: "rgb(var(--fg) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["Poppins", "system-ui", "sans-serif"],
         mono: ["'Anonymous Pro'", "ui-monospace", "monospace"],
       },
       boxShadow: {
-        glow: "0 18px 50px -24px rgba(33, 150, 243, 0.55)",
-        card: "0 24px 60px -32px rgba(0, 0, 0, 0.85)",
-      },
-      backgroundImage: {
-        "accent-gradient": "linear-gradient(135deg, #2196f3 0%, #1565c0 100%)",
+        glow: "0 14px 44px -20px rgba(0, 0, 0, 0.55)",
+        card: "0 18px 50px -28px rgba(0, 0, 0, 0.6)",
       },
       keyframes: {
         fadeRise: {

@@ -82,7 +82,11 @@ tailwind.config.js   # theme colors, fonts, shadows
 
 ## Changing the look
 
-- **Colors, fonts, shadows:** `tailwind.config.js` (`theme.extend`).
+- **Theme colours (black & white):** the greyscale palette is defined as CSS
+  variables in `src/styles/main.css` — `:root` is the dark (black) theme and
+  `body.light-theme` is the light (white) theme. Tweak those RGB values to shift
+  the greys or reintroduce an accent. The theme toggle switches between them.
+- **Fonts, shadows, token names:** `tailwind.config.js` (`theme.extend`).
 - **Layout / markup of a section:** `src/index.njk` (or the shared card markup
   in `src/_includes/macros/ui.njk`).
 - **Global page chrome (nav, footer):** `src/_includes/layouts/base.njk`.
