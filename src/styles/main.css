@@ -17,7 +17,7 @@
   }
 
   .btn-disabled {
-    @apply inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium bg-fg/5 text-muted;
+    @apply inline-flex cursor-not-allowed items-center gap-1.5 rounded-lg border border-dashed border-fg/25 px-4 py-2 text-sm font-medium text-muted/60 opacity-70;
   }
 }
 
