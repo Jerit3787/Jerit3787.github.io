@@ -2,7 +2,7 @@
   "intro": "Giving back to the security community through talks, workshops, and challenge authoring",
   "categories": [
     {
-      "name": "Workshops & Talks",
+      "name": "Talks",
       "items": [
         {
           "icon": "fa-chalkboard-user",
@@ -15,12 +15,17 @@
           ],
           "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/posts/htb-meetup-iium/" },
           "chips": ["PWN", "HTB", "IIUM"]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Workshops",
+      "items": [
         {
           "icon": "fa-laptop-code",
-          "title": "Cybersecurity Workshop",
+          "title": "Introduction to CTF for Web Exploitation",
           "date": "2025",
-          "description": "Given a talk at Introduction to CTF for Web Exploitation workshop hosted by UPM GDoC at UPM",
+          "description": "Delivered a talk and hands-on session at the Introduction to CTF for Web Exploitation workshop hosted by UPM GDoC at UPM.",
           "bullets": [
             "Delivered presentation on web exploitation techniques",
             "Conducted hands-on CTF demonstration sessions",
