@@ -3,7 +3,14 @@
   "extends": [
     "config:recommended"
   ],
-  "baseBranchPatterns": [
-    "dev"
+  "automerge": true,
+  "automergeStrategy": "squash",
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "description": "Hold major updates for manual review",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
   ]
 }
