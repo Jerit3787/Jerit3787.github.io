@@ -256,6 +256,42 @@
       "items": [
         {
           "icon": "fa-bug",
+          "title": "UTAR CyberHunt 2026 — ThreadJack",
+          "kind": "challenge",
+          "date": "July 2026",
+          "description": "Authored a Node.js / EJS Web challenge for UTAR CyberHunt 2026: user preferences are recursively merged, then spread into the template engine's render options — turning a settings endpoint into server-side RCE.",
+          "links": [
+            {
+              "label": "View Writeup",
+              "href": "https://ctf.danplace.tech/posts/utar-cyberhunt-2026-threadjack/"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "UTAR CyberHunt 2026",
+            "Prototype Pollution / EJS"
+          ]
+        },
+        {
+          "icon": "fa-bug",
+          "title": "UTAR CyberHunt 2026 — PublicNotes",
+          "kind": "challenge",
+          "date": "July 2026",
+          "description": "Authored a GraphQL Web challenge for UTAR CyberHunt 2026: a sensitive field on the shared User type stays reachable from public queries, so a field-level authorization gap leaks the flag a few hops in.",
+          "links": [
+            {
+              "label": "View Writeup",
+              "href": "https://ctf.danplace.tech/posts/utar-cyberhunt-2026-publicnotes/"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "UTAR CyberHunt 2026",
+            "GraphQL"
+          ]
+        },
+        {
+          "icon": "fa-bug",
           "title": "HACKNYX CTF 2026 — Middle Management",
           "kind": "challenge",
           "date": "June 2026",
