@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Danish Hakim | Portfolio
 ---
-{% from "macros/ui.njk" import heading, chips, linkBtn, infoCard %}
+{% from "macros/ui.njk" import heading, chips, linkBtn, infoCard, cardRow %}
 
 {# ===================== HERO ===================== #}
 <section id="home" class="relative flex min-h-screen items-center overflow-hidden scroll-mt-16 pt-16">
@@ -93,43 +93,20 @@ title: Danish Hakim | Portfolio
   </div>
 </section>
 
-{# ===================== ACHIEVEMENTS (featured) ===================== #}
-<section id="achievements" class="scroll-mt-16 bg-card/40 py-24">
+{# ===================== CTF & SECURITY ===================== #}
+<section id="security" class="scroll-mt-16 bg-card/40 py-24">
   <div class="mx-auto max-w-6xl px-5">
-    {{ heading("Latest Achievements", achievements.homeIntro) }}
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {% for section in achievements.sections %}
-        {% for item in section.items %}
-          {% if item.featured %}{{ infoCard(item) }}{% endif %}
-        {% endfor %}
-      {% endfor %}
-    </div>
-    <div class="mt-10 text-center reveal">
-      <a href="/achievements/" class="btn-primary">
-        <i class="material-icons text-[18px]">emoji_events</i>View All Achievements
-      </a>
-    </div>
-  </div>
-</section>
-
-{# ===================== CTF WRITEUPS ===================== #}
-<section id="ctf-writeups" class="scroll-mt-16 py-24">
-  <div class="mx-auto max-w-6xl px-5">
-    {{ heading("CTF Writeups", ctf.intro) }}
-    {% set ctfCards = ctfPosts if ctfPosts.length else ctf.items %}
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {% for item in ctfCards %}{{ infoCard(item) }}{% endfor %}
-    </div>
-    <div class="mt-10 text-center reveal">
-      <a href="{{ ctf.viewAllUrl }}" class="btn-primary">
-        <i class="material-icons text-[18px]">list</i>View All CTF Writeups
-      </a>
-    </div>
+    {{ heading("CTF &amp; Security", security.intro) }}
+    {% set writeups = ctfPosts if ctfPosts.length else ctf.items %}
+    {{ cardRow("Competitions", security.competitions, { href: security.archiveUrl, label: "View full record" }) }}
+    {{ cardRow("Writeups", writeups, { href: ctf.viewAllUrl, label: "All writeups" }) }}
+    {{ cardRow("Talks & Workshops", security.talks) }}
+    {{ cardRow("Challenges Authored", security.challenges) }}
   </div>
 </section>
 
 {# ===================== SKILLS ===================== #}
-<section id="skills" class="scroll-mt-16 bg-card/40 py-24">
+<section id="skills" class="scroll-mt-16 py-24">
   <div class="mx-auto max-w-6xl px-5">
     {{ heading("Skills &amp; Expertise", skills.intro) }}
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -161,27 +138,10 @@ title: Danish Hakim | Portfolio
 </section>
 
 {# ===================== EXPERIENCE ===================== #}
-<section id="experience" class="scroll-mt-16 py-24">
+<section id="experience" class="scroll-mt-16 bg-card/40 py-24">
   <div class="mx-auto max-w-6xl px-5">
     {{ heading("Experience &amp; Activities", experience.intro) }}
     {% for category in experience.categories %}
-      <div class="mt-12">
-        <h3 class="reveal mb-6 flex items-center gap-3 text-xl font-semibold text-fg">
-          <span class="h-5 w-1 rounded-full bg-fg"></span>{{ category.name }}
-        </h3>
-        <div class="grid gap-6 md:grid-cols-2">
-          {% for item in category.items %}{{ infoCard(item) }}{% endfor %}
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-{# ===================== COMMUNITY CONTRIBUTIONS ===================== #}
-<section id="community" class="scroll-mt-16 bg-card/40 py-24">
-  <div class="mx-auto max-w-6xl px-5">
-    {{ heading("Community Contributions", community.intro) }}
-    {% for category in community.categories %}
       <div class="mt-12">
         <h3 class="reveal mb-6 flex items-center gap-3 text-xl font-semibold text-fg">
           <span class="h-5 w-1 rounded-full bg-fg"></span>{{ category.name }}

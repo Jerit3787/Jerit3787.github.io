@@ -61,6 +61,27 @@
   </div>
 {% endmacro %}
 
+{# ----- Labelled row of cards with an optional trailing action link ----- #}
+{% macro cardRow(title, items, action) %}
+  {% if items and items.length %}
+    <div class="mt-14 first:mt-12">
+      <h3 class="reveal mb-6 flex items-center gap-3 text-xl font-semibold text-fg">
+        <span class="h-5 w-1 rounded-full bg-fg"></span>{{ title }}
+      </h3>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {% for item in items %}{{ infoCard(item) }}{% endfor %}
+      </div>
+      {% if action %}
+        <div class="reveal mt-8">
+          <a href="{{ action.href }}" class="btn-soft">
+            {{ action.label }}<i class="fas fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
 {# ----- Achievement / experience-style card (with optional bullets) ----- #}
 {% macro infoCard(item) %}
   <article class="reveal group flex flex-col overflow-hidden rounded-2xl border border-fg/10 bg-card shadow-card transition duration-300 hover:-translate-y-1 hover:border-fg/30">

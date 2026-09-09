@@ -10,7 +10,7 @@ module.exports = async function () {
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const xml = await res.text();
-    const items = mapFeedToItems(xml, ctf.count || 6);
+    const items = mapFeedToItems(xml, ctf.count || 3);
     console.log(`[ctfPosts] loaded ${items.length} writeup(s) from ${ctf.feedUrl}`);
     return items;
   } catch (err) {
