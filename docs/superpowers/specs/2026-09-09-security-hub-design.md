@@ -43,8 +43,14 @@ in `src/_includes/macros/ui.njk`. Four rows, in order:
    fallback. Unchanged behaviour from PR #33.
 3. **Talks & Workshops** — items of `kind: "talk"`.
 4. **Challenges Authored** — items of `kind: "challenge"`. The row is
-   omitted entirely while the list is empty (seeded empty; Danish adds
-   his authored HACKNYX challenges here later).
+   omitted entirely while the list is empty. Seeded with the four
+   challenges Danish authored for public CTFs (3× HACKNYX CTF 2026,
+   1× OWASP Liga CTF 2026), sourced from his writeup blog.
+
+Note: while the blog's recent posts are mostly the HACKNYX challenge
+writeups, those three appear in both the Writeups row (live feed) and
+the Challenges Authored row. This is a transient overlap that resolves
+as non-authored writeups are published; not de-duplicated.
 
 Row headings are literal text in the template. One intro line comes from
 `security.intro`.
@@ -61,9 +67,12 @@ competition/talk archive. Each item in `sections[].items` gains a
   "Introduction to CTF — UPM GDoC"). The December talk gains a second
   link to the HTB Meetup writeup (`https://ctf.danplace.tech/posts/htb-meetup-iium/`).
 - All other CTF-section items get `kind: "competition"`.
-- The "Academic & Professional Recognition" and "Technical Projects &
-  Innovation" sections are left untouched (archive-page only, not part
-  of this pass — see Out of scope).
+- A new `sections[1]` heading "CTF Challenges Authored" holds the four
+  seeded `kind: "challenge"` items (also shown on the archive page).
+- Items in "Academic & Professional Recognition" and "Technical Projects
+  & Innovation" are tagged `kind: "recognition"` / `"project"` so the
+  hub's `byKind` filters never pick them up as competitions. Their
+  content is otherwise untouched (see Out of scope).
 
 New computed data file **`src/_data/security.js`** (Eleventy JS data,
 mirrors the existing `ctfPosts.js` pattern):

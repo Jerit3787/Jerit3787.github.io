@@ -17,11 +17,9 @@
   "nav": [
     { "label": "Home", "href": "#home", "icon": "home" },
     { "label": "About", "href": "#about", "icon": "account_circle" },
-    { "label": "Achievements", "href": "#achievements", "icon": "emoji_events" },
-    { "label": "CTF Writeups", "href": "#ctf-writeups", "icon": "security" },
+    { "label": "CTF & Security", "href": "#security", "icon": "security" },
     { "label": "Skills", "href": "#skills", "icon": "code" },
     { "label": "Experience", "href": "#experience", "icon": "work" },
-    { "label": "Community", "href": "#community", "icon": "volunteer_activism" },
     { "label": "Projects", "href": "#projects", "icon": "view_module" },
     { "label": "Contact", "href": "#contact", "icon": "contact_page" }
   ],

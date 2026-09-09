@@ -11,6 +11,7 @@
           "image": "/assets/img/experience9.jfif",
           "alt": "Afiq Danial, Me and Muhaimin holding our 3rd place cheque at NexSec 2025",
           "title": "NexSec 2025",
+          "kind": "competition",
           "rank": {
             "num": "3",
             "ord": "rd"
@@ -31,13 +32,18 @@
         {
           "image": "/assets/img/experience11.jfif",
           "alt": "Me introducing myself at the talk",
-          "title": "CTF Workshop Speaker",
+          "title": "Introduction to PWN — IIUM (ICE × SIG)",
+          "kind": "talk",
           "date": "December 2025",
           "description": "Delivered a technical talk at the “Introduction to PWN” workshop hosted by ICE and SIG at IIUM. The session focused on Binary Exploitation fundamentals, where I guided participants through real-world CTF scenarios, demonstrated on solving challenges, and shared practical techniques for solving pwn-based challenges.",
           "links": [
             {
               "label": "View LinkedIn Post",
               "href": "https://www.linkedin.com/posts/jerit3787_hello-everyone-on-5th-december-2025-i-activity-7409050132492619776-48N9"
+            },
+            {
+              "label": "View Writeup",
+              "href": "https://ctf.danplace.tech/posts/htb-meetup-iium/"
             }
           ],
           "chips": [
@@ -51,6 +57,7 @@
           "image": "/assets/img/experience10.jfif",
           "alt": "Muhaimin and Afiq Danial holding our hampers and me holding our certificates at IGOH 2025",
           "title": "iGOH 2025",
+          "kind": "competition",
           "rank": {
             "num": "8",
             "ord": "th"
@@ -73,6 +80,7 @@
           "image": "/assets/img/experience6.jfif",
           "alt": "Muhaimin, Me and Afiq Danial holding our 5th place cheque at IBOH CTF 2025 - Stage 1",
           "title": "IBOH CTF 2025 - Stage 1",
+          "kind": "competition",
           "rank": {
             "num": "5",
             "ord": "th"
@@ -94,6 +102,7 @@
           "image": "/assets/img/experience4.jfif",
           "alt": "Venue enviroment at APU, no team photo tho :(",
           "title": "System Override CTF 2025",
+          "kind": "competition",
           "rank": {
             "num": "12",
             "ord": "th"
@@ -116,6 +125,7 @@
           "image": "/assets/img/experience1.jfif",
           "alt": "Me, Afiq Danial and Muhaimin at Cyber Siaga CTF 2025",
           "title": "Siber Siaga CTF 2025",
+          "kind": "competition",
           "rank": {
             "num": "14",
             "ord": "th"
@@ -138,6 +148,7 @@
           "image": "/assets/img/experience2.jfif",
           "alt": "Afiq Danial, Muhaimin and Me at SunCTF 2025",
           "title": "SunCTF 2025",
+          "kind": "competition",
           "rank": {
             "num": "35",
             "ord": "th"
@@ -159,7 +170,8 @@
         {
           "image": "/assets/img/experience3.jfif",
           "alt": "Muhd Hafiz, Me and Shree giving talk at UPM",
-          "title": "CTF Workshop Speaker",
+          "title": "Introduction to CTF — UPM GDoC",
+          "kind": "talk",
           "date": "May 2025",
           "description": "Delivered a technical talk at the “Introduction to CTF” workshop hosted by UPM GDoC at Universiti Putra Malaysia (UPM). The session focused on Web Exploitation fundamentals, where I guided participants through real-world CTF scenarios, demonstrated common vulnerabilities, and shared practical techniques for solving web-based challenges.",
           "links": [
@@ -177,6 +189,7 @@
         {
           "icon": "fa-trophy",
           "title": "UMDCTF 2025",
+          "kind": "competition",
           "rank": {
             "num": "61",
             "ord": "st"
@@ -193,6 +206,7 @@
           "image": "/assets/img/experience8.jfif",
           "alt": "A selfie me showing proof doing the competition during UMCS CTF 2025",
           "title": "UMCS CTF 2025",
+          "kind": "competition",
           "rank": {
             "num": "41",
             "ord": "st"
@@ -215,6 +229,7 @@
           "image": "/assets/img/experience7.jfif",
           "alt": "Merch received for Lucky Draw Writeup at Wargames.my 2023",
           "title": "Wargames.my 2024 & 2023",
+          "kind": "competition",
           "date": "December 2023 & 2024",
           "description": "Successfully solved multiple Web Exploitation challenges across two consecutive years, focusing on RCE (Remote Code Execution) and SQL injection techniques.",
           "links": [
@@ -236,12 +251,91 @@
       ]
     },
     {
+      "heading": "CTF Challenges Authored",
+      "intro": "Challenges I designed and contributed to public CTF competitions",
+      "items": [
+        {
+          "icon": "fa-bug",
+          "title": "HACKNYX CTF 2026 — Middle Management",
+          "kind": "challenge",
+          "date": "June 2026",
+          "description": "Authored a single-step Web challenge for HACKNYX CTF 2026 built around CVE-2025-29927, the Next.js middleware authorization bypass.",
+          "links": [
+            {
+              "label": "View Writeup",
+              "href": "https://ctf.danplace.tech/posts/hacknyx-ctf-2026-middle-management/"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "HACKNYX CTF 2026",
+            "Next.js"
+          ]
+        },
+        {
+          "icon": "fa-bug",
+          "title": "HACKNYX CTF 2026 — No Slang (series)",
+          "kind": "challenge",
+          "date": "June 2026",
+          "description": "Authored a three-part Web series for HACKNYX CTF 2026 sharing one SQLi → SSTI → RCE chain, with each level bolting on another defence to creatively bypass.",
+          "links": [
+            {
+              "label": "View Writeup",
+              "href": "https://ctf.danplace.tech/posts/hacknyx-ctf-2026-no-slang/"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "HACKNYX CTF 2026",
+            "SQLi / SSTI"
+          ]
+        },
+        {
+          "icon": "fa-bug",
+          "title": "HACKNYX CTF 2026 — Deskmesh Support",
+          "kind": "challenge",
+          "date": "June 2026",
+          "description": "Authored a client-side Web challenge for HACKNYX CTF 2026 themed around a support-ticket desk called Deskmesh.",
+          "links": [
+            {
+              "label": "View Writeup",
+              "href": "https://ctf.danplace.tech/posts/hacknyx-ctf-2026-deskmesh/"
+            }
+          ],
+          "chips": [
+            "Web Exploitation",
+            "HACKNYX CTF 2026",
+            "Client-Side"
+          ]
+        },
+        {
+          "icon": "fa-user-secret",
+          "title": "OWASP Liga CTF 2026 — The Ghost in the Git",
+          "kind": "challenge",
+          "date": "April 2026",
+          "description": "Authored an OSINT challenge for OWASP Liga CTF 2026: reconstruct proprietary engine code and infrastructure secrets a contractor leaked across GitHub artifacts before trying to cover their tracks.",
+          "links": [
+            {
+              "label": "View Writeup",
+              "href": "https://ctf.danplace.tech/posts/liga-ctf-2026-the-ghost-in-the-git/"
+            }
+          ],
+          "chips": [
+            "OSINT",
+            "OWASP Liga CTF 2026",
+            "GitHub Recon"
+          ]
+        }
+      ]
+    },
+    {
       "heading": "Academic & Professional Recognition",
       "intro": "Recognition in academics, open source contributions, and professional development",
       "items": [
         {
           "icon": "fa-code-branch",
           "title": "Open Source Contributor",
+          "kind": "recognition",
           "date": "2024 - 2025",
           "description": "Successfully contributed to major open source projects including Materialize CSS framework and AnimeTV, with multiple pull requests merged into their main repositories.",
           "chips": [
@@ -253,6 +347,7 @@
         {
           "icon": "fa-laptop-code",
           "title": "10+ Years Programming",
+          "kind": "recognition",
           "date": "2015 - Present",
           "description": "Started programming at age 10 and continuously developing skills across multiple languages and frameworks, with particular expertise in JavaScript and web technologies.",
           "chips": [
@@ -264,6 +359,7 @@
         {
           "icon": "fa-graduation-cap",
           "title": "Computer Science Student",
+          "kind": "recognition",
           "date": "2023 - Present",
           "description": "Pursuing Bachelor of Computer Science with specialization in Network & Security at International Islamic University Malaysia (IIUM), maintaining strong academic performance.",
           "chips": [
@@ -281,6 +377,7 @@
         {
           "icon": "fa-shipping-fast",
           "title": "Parcel Management System",
+          "kind": "project",
           "date": "2020 - Present",
           "description": "Built a smart parcel tracking system for schools to replace manual handling. Sends real-time updates, supports courier tracking, and improves student support. Won multiple awards and built with Next.js, Firebase, and Material Design.",
           "chips": [
@@ -294,6 +391,7 @@
           "image": "/assets/img/experience5.jfif",
           "alt": "The badge given to me thru email, lost at credly platform",
           "title": "App of The Month",
+          "kind": "project",
           "date": "October 2017",
           "description": "Recognized by MIT App Inventor as the App of the Month for October 2017. Featured in the official 2017 winners article and awarded a digital badge for innovation and impact.",
           "links": [
@@ -311,6 +409,7 @@
         {
           "icon": "fa-tools",
           "title": "Multi-Disciplinary Skills",
+          "kind": "project",
           "date": "Ongoing",
           "description": "Mastered diverse technical skills including web development, cybersecurity, digital editing (Photoshop, Illustrator), live streaming production, and robotics competition experience.",
           "chips": [

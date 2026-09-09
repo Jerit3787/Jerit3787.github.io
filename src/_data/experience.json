@@ -2,19 +2,6 @@
   "intro": "My professional journey and notable activities",
   "categories": [
     {
-      "name": "Cybersecurity",
-      "items": [
-        {
-          "icon": "fa-shield-alt",
-          "title": "CTF Competitions",
-          "date": "2023 - Present",
-          "description": "Actively participating in Capture The Flag (CTF) competitions to enhance my cybersecurity skills and knowledge.",
-          "bullets": ["Wargames.my CTF (2023-2024)", "UMCS CTF 2025", "SunCTF 2025"],
-          "chips": ["Web Exploitation", "Penetration Testing", "Security"]
-        }
-      ]
-    },
-    {
       "name": "Event Management",
       "items": [
         {
