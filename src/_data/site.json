@@ -21,6 +21,7 @@
     { "label": "CTF Writeups", "href": "#ctf-writeups", "icon": "security" },
     { "label": "Skills", "href": "#skills", "icon": "code" },
     { "label": "Experience", "href": "#experience", "icon": "work" },
+    { "label": "Community", "href": "#community", "icon": "volunteer_activism" },
     { "label": "Projects", "href": "#projects", "icon": "view_module" },
     { "label": "Contact", "href": "#contact", "icon": "contact_page" }
   ],
