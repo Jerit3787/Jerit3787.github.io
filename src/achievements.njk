@@ -9,16 +9,16 @@ permalink: /achievements/index.html
 <section class="relative overflow-hidden pt-32 pb-16 scroll-mt-16">
   <div class="pointer-events-none absolute -left-32 -top-10 h-96 w-96 rounded-full bg-fg/10 blur-3xl"></div>
   <div class="mx-auto max-w-6xl px-5 text-center">
-    <a href="/#achievements" class="inline-flex items-center gap-1.5 text-sm text-fg transition hover:text-fg">
+    <a href="/#security" class="inline-flex items-center gap-1.5 text-sm text-fg transition hover:text-fg">
       <i class="material-icons text-[18px]">arrow_back</i>Back to Home
     </a>
     <h1 class="mt-4 text-4xl font-bold text-fg sm:text-5xl">Achievements</h1>
     <span class="mx-auto mt-4 block h-1 w-16 rounded-full bg-fg"></span>
-    <p class="mx-auto mt-4 max-w-2xl text-muted">{{ achievements.pageIntro }}</p>
+    <p class="mx-auto mt-4 max-w-2xl text-muted">{{ achievementsPage.pageIntro }}</p>
   </div>
 </section>
 
-{% for section in achievements.sections %}
+{% for section in achievementsPage.sections %}
   <section class="py-12 {{ 'bg-card/40' if loop.index is even }}">
     <div class="mx-auto max-w-6xl px-5">
       <div class="reveal">
