@@ -3,31 +3,32 @@
   "viewAllUrl": "https://jerit3787.github.io/ctf/",
   "feedUrl": "https://ctf.danplace.tech/feed.xml",
   "count": 3,
-  "_comment": "items below are a fallback rendered only if the build-time feed fetch (ctfPosts.js) fails",
+  "writeupCategories": ["CTF Writeup", "HTB Writeup"],
+  "_comment": "writeupCategories keeps the Writeups row to solve writeups (drops 'Challenge Created' etc). items below are a fallback rendered only if the build-time feed fetch fails.",
   "items": [
     {
       "icon": "fa-bug",
-      "title": "NexSec 2025",
+      "title": "NexSec 2025 (Grand Finals)",
       "date": "December 20, 2025",
-      "description": "This writeup consist of all challenge my team (Perisai BETA) solved during preliminary & finals of the CTF. Consists of Digital Forensics challenges and final report.",
-      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/tags/nexsec-2025/" },
-      "chips": ["Digital Forensics", "MCMC"]
+      "description": "Digital Forensics challenges my team (PERISAI Beta) solved during the NexSec 2025 grand finals, plus the incident-response report.",
+      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/posts/nexsec-2025-grand-finals/" },
+      "chips": ["Forensics"]
     },
     {
       "icon": "fa-bug",
-      "title": "HTB Meetup IIUM - PWN",
-      "date": "December 7, 2025",
-      "description": "This writeup consist of solutions for my challenges that i've presented during the talk",
-      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/posts/htb-meetup-iium/" },
-      "chips": ["PWN", "HTB", "IIUM"]
+      "title": "NexSec 2025 (Qualifiers)",
+      "date": "December 16, 2025",
+      "description": "Writeup of the challenges solved during the NexSec 2025 qualifier round.",
+      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/posts/nexsec-2025-qualifiers/" },
+      "chips": ["Forensics"]
     },
     {
       "icon": "fa-bug",
-      "title": "MCC 2025 Writeup",
-      "date": "April 14, 2025",
-      "description": "This writeup consist of the group challenge that were given to us which is a boot2root challenge and my experience during the MCC 2025 journey.",
-      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/tags/mcc-2025/" },
-      "chips": ["Boot2Root", "MCC", "Re:HACK"]
+      "title": "iGoH 2025 (Preliminary)",
+      "date": "November 24, 2025",
+      "description": "Writeup of the International Games of Hackers 2025 preliminary round.",
+      "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/posts/igoh-preliminary/" },
+      "chips": ["Web Exploitation"]
     }
   ]
 }
