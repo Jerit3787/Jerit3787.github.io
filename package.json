@@ -10,12 +10,17 @@
     "watch:css": "postcss src/styles/main.css -o _site/assets/css/main.css --watch",
     "serve": "eleventy --serve",
     "dev": "npm run build:html && npm run build:css && concurrently -k \"npm:watch:css\" \"npm:serve\"",
-    "clean": "rimraf _site"
+    "clean": "rimraf _site",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.2.4",
+    "fast-xml-parser": "^5.11.1",
     "postcss": "^8.5.25",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",

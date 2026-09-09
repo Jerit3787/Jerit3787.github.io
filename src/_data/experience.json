@@ -11,18 +11,6 @@
           "description": "Actively participating in Capture The Flag (CTF) competitions to enhance my cybersecurity skills and knowledge.",
           "bullets": ["Wargames.my CTF (2023-2024)", "UMCS CTF 2025", "SunCTF 2025"],
           "chips": ["Web Exploitation", "Penetration Testing", "Security"]
-        },
-        {
-          "icon": "fa-laptop-code",
-          "title": "Cybersecurity Workshop",
-          "date": "2025",
-          "description": "Given a talk at Introduction to CTF for Web Exploitation workshop hosted by UPM GDoC at UPM",
-          "bullets": [
-            "Delivered presentation on web exploitation techniques",
-            "Conducted hands-on CTF demonstration sessions",
-            "Shared practical cybersecurity knowledge with participants"
-          ],
-          "chips": ["Web Exploitation", "Workshop", "UPM"]
         }
       ]
     },

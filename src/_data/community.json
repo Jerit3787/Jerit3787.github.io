@@ -1,0 +1,34 @@
+{
+  "intro": "Giving back to the security community through talks, workshops, and challenge authoring",
+  "categories": [
+    {
+      "name": "Workshops & Talks",
+      "items": [
+        {
+          "icon": "fa-chalkboard-user",
+          "title": "HTB Meetup IIUM — PWN Talk",
+          "date": "December 7, 2025",
+          "description": "Presented an introduction to binary exploitation (PWN) at the Hack The Box Meetup hosted at IIUM, walking through custom challenges built for the session.",
+          "bullets": [
+            "Introduced stack-based buffer overflows and the exploitation workflow",
+            "Live-solved custom PWN challenges together with attendees"
+          ],
+          "link": { "label": "View Writeup", "href": "https://ctf.danplace.tech/posts/htb-meetup-iium/" },
+          "chips": ["PWN", "HTB", "IIUM"]
+        },
+        {
+          "icon": "fa-laptop-code",
+          "title": "Cybersecurity Workshop",
+          "date": "2025",
+          "description": "Given a talk at Introduction to CTF for Web Exploitation workshop hosted by UPM GDoC at UPM",
+          "bullets": [
+            "Delivered presentation on web exploitation techniques",
+            "Conducted hands-on CTF demonstration sessions",
+            "Shared practical cybersecurity knowledge with participants"
+          ],
+          "chips": ["Web Exploitation", "Workshop", "UPM"]
+        }
+      ]
+    }
+  ]
+}
